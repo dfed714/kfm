@@ -1,0 +1,170 @@
+:root {
+    --Navbar-ht: 10vh;
+}
+
+/* GENERAL STYLING  */
+
+button {
+    border-radius: 5rem;
+    border-color: transparent;
+    color: white;
+    background-color: rgb(49, 117, 49);
+    font-size: clamp(1rem, 1vw, 2rem);
+    padding: 0.75em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: clip;
+}
+
+/* NAV BAR  */
+
+.navbar {
+    height: var(--Navbar-ht);
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-list, .right-list {
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid yellow;
+}
+
+.left-list {
+    width: 25%;
+}
+
+.right-list {
+    width: 50%;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* SECTION 1  */
+
+.section1 {
+    height: calc(100vh - var(--Navbar-ht));
+    margin-top: var(--Navbar-ht);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section1 div {
+    border: 2px solid red;
+}
+
+.section1-text {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.section1-text h1 {
+    font-size: clamp(1rem, 7vw, 4rem);
+    font-weight: 800;
+}
+
+.section1-text h3 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 300;
+}
+
+.section1-image {
+    width: 50%;
+    height: 75%;
+}
+
+/* SECTION 2 */
+
+.section2 {
+    width: 100%;
+    border: 2px solid blue;
+}
+
+.content-box {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 2px solid blue;
+}
+
+.text-box {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.lead {
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: darkgreen;
+    font-weight: 500;
+}
+
+.headline {
+    font-size: clamp(1rem, 5vw, 3rem);
+    font-weight: 800;
+}
+
+p {
+    font-size: clamp(1rem, 1vw, 3rem);
+    line-height: 150%;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-box {
+    height: 50%;
+    width: 30%;
+}
+
+/* CONTENT 1 */
+
+.content1 {
+    background-color: rgb(236, 236, 236);
+}
+
+/* CONTENT 2 */
+
+/* CONTENT 3 */
+
+.content3 {
+    background: rgb(220, 221, 225);
+}
+
+/* FOOTER  */
+
+.footer {
+    height: 25vh;
+    width: 100%;
+    background-color: grey;
+}
