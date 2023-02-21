@@ -31,7 +31,7 @@
 /* GENERAL STYLING  */
 
 button {
-    border-color: black;
+    border: 2px solid black;
     color: black;
     background-color: var(--btn-bg);
     font-size: var(--fs-s);
@@ -49,6 +49,7 @@ button {
 html {
     font-size: 16px;
     overflow-x: clip;
+    background-color: whitesmoke;
 }
 
 @keyframes slide-up {
@@ -72,16 +73,13 @@ html {
     list-style: none;
     display: flex;
     font-family: var(--gen-ff);
-    font-size: var(--fs-s);
+    font-size: var(--fs-m);
     width: var(--left-list-width);
     gap: 1em;
     position: absolute;
     left: 5vw;
     top: 0;
-}
-
-.left-list:first-child {
-    letter-spacing: 0.25em;
+    color: whitesmoke;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -158,13 +156,13 @@ html {
 
 .section1-text h3 {
     font-size: var(--fs-m);
-    color: white;
+    color: whitesmoke;
     font-weight: var(--fw-thin);
 }
 
 .section1-btn {
-    color: white;
-    border-color: white;
+    color: whitesmoke;
+    border-color: whitesmoke;
 }
 
 .section1-image {
@@ -271,19 +269,19 @@ img {
 /* CONTENT 1 */
 
 .content1 {
-    background-color: #F7B2BD;
+    background-color: rgb(233, 189, 231);
 }
 
 /* CONTENT 2 */
 
 .content2 {
-    background-color: rgb(233, 189, 231);
+    background-color: #E8F0FF;
 }
 
 /* CONTENT 3 */
 
 .content3 {
-    background-color: #E8F0FF;
+    background-color: #F7ACCF;
 }
 
 /* FOOTER  */
@@ -291,7 +289,7 @@ img {
 .footer {
     height: max(15vw, 17.5rem);
     width: 100%;
-    background-color: #7180AC;
+    background: var(--s1-bg);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -313,6 +311,7 @@ img {
     gap: 1em;
     font-size: var(--fs-s);
     font-family: var(--gen-ff);
+    color: whitesmoke;
 }
 
 .footer-docs-list {
