@@ -76,7 +76,7 @@ html {
     gap: 1em;
     position: absolute;
     left: 5vw;
-    top: 0.5vw;
+    top: 0;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -101,9 +101,9 @@ html {
     color: #7180AC;
     margin-right: 1em;
     background-color: transparent;
-    position: fixed;
-    top: 1vw;
-    right: -2.5vw;
+    position: absolute;
+    right: -0.5em;
+    top: 0.5vw;
 }
 
 /* SECTION 1  */
@@ -216,8 +216,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50rem;
+    height: fit-content;
     padding-inline: 5vw;
+    padding-block: 10vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .content-box {
+    padding-block: 15vw;
+    }
 }
 
 .text-box {
@@ -285,9 +292,9 @@ img {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column-reverse;
-    gap: 2vw;
+    gap: 10vw;
     padding-inline: 5vw;
-    padding-block: 2vw;
+    padding-top: 2vw;
 }
 
 .footer ul {
