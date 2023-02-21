@@ -43,6 +43,7 @@ button {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -77,6 +78,10 @@ html {
     position: absolute;
     left: 5vw;
     top: 0;
+}
+
+.left-list:first-child {
+    letter-spacing: 0.25em;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -233,7 +238,6 @@ html {
     align-items: flex-start;
     gap: var(--s2-text-gap);
     font-family: var(--gen-ff);
-    padding-right: 3vw;
 }
 
 .lead {
@@ -290,12 +294,18 @@ img {
     background-color: #7180AC;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column-reverse;
-    gap: 2vw;
     padding-inline: 5vw;
-    padding-top: 2vw;
+    padding-block: 2vw;
 }
+
+@media only screen and (min-width: 1500px) {
+    .footer {
+        padding-bottom: 1vw;
+    }
+}
+
 
 .footer ul {
     list-style: none;
