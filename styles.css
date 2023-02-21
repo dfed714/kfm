@@ -292,7 +292,7 @@ img {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column-reverse;
-    gap: 10vw;
+    gap: 2vw;
     padding-inline: 5vw;
     padding-top: 2vw;
 }
