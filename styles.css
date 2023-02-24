@@ -170,12 +170,22 @@ button {
         display: none;
     }
 
+    .section1-text h3 {
+        font-size: var(--fs-l);
+    }
+
     .section1-text {
+        height: 75%;
         width: 100%;
+        justify-content: center;
+    }
+
+    .section1 {
+        padding-right: 0;
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 550px) {
     .section1 {
         background: #88498F;
     }
