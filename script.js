@@ -4,8 +4,7 @@ const slogan = document.querySelector(".slogan");
 
 function homeTextPadding() {
     if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height > 280) {
-        console.log("now");
-        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 10)}px`;
+        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 20)}px`;
     } else if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height <= 280) {
         slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 75)}px`;
     }
