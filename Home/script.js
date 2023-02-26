@@ -10,6 +10,10 @@ const content = document.querySelector(".content");
 
 // MENU 
 
+(function historyFunc() {
+    console.log(document.referrer);
+})();
+
 hamburger.addEventListener("click", function() {
     menu.classList.remove("display-none");
 })

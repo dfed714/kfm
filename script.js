@@ -11,6 +11,7 @@ const content = document.querySelector(".content");
 // LOADING SCREEN 
 function loadingScreen() {
     if(!localStorage.getItem("loaded")) {
+        console.log(document.referrer);
         localStorage.setItem("loaded", true);
         loadingPage.classList.remove("display-none");
         content.classList.add("display-none");
@@ -28,23 +29,20 @@ function loadingScreen() {
 
 window.addEventListener("load", loadingScreen);
 
-window.addEventListener('onunload', (e) => {
-    e.preventDefault();
-    localStorage.removeItem("loaded");
-    return;
-  });
-
-
-// MENU 
-
-hamburger.addEventListener("click", function() {
-    menu.classList.remove("display-none");
-})
-
-xOut.addEventListener("click", function() {
-    menu.classList.add("display-none");
-})
-
-homeBtn.addEventListener("click", function() {
-    localStorage.setItem("loaded", true);
-})
+window.addEventListener('beforeunload', (e) => {
+        e.preventDefault();
+        localStorage.clear();
+        return;
+    });
+    
+    
+    // MENU 
+    
+    hamburger.addEventListener("click", function() {
+        menu.classList.remove("display-none");
+    })
+    
+    xOut.addEventListener("click", function() {
+        menu.classList.add("display-none");
+    })
+    
