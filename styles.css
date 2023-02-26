@@ -161,6 +161,7 @@ button {
     }
 
     .section1-text {
+        padding-top: 7.5em;
         height: 100%;
         width: 100%;
         justify-content: center;
@@ -170,6 +171,24 @@ button {
         padding-right: 0;
     }
 }
+
+/* @media only screen and (max-height: 700px) {
+    .section1-text {
+        padding-top: 10em;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .section1-text {
+        padding-top: 12.5em;
+    }
+}
+
+@media only screen and (max-height: 575px) {
+    .section1-text {
+        padding-top: 15em;
+    }
+} */
 
 @media only screen and (max-width: 800px) {
     .section1-image {
