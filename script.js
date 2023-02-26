@@ -13,5 +13,5 @@ function homeTextPadding() {
 homeTextPadding();
 
 screen.orientation.addEventListener("change", function(e) {
-    homeTextPadding();
+    location.reload();
 })
