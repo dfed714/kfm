@@ -19,10 +19,9 @@ screen.orientation.addEventListener("change", function() {
 
 // LOADING SCREEN 
 
-function loading() {
-    document.querySelector(".content").classList.remove("display-none");
-    loadingPage.classList.add("display-none");
-    loadingPage.style.background = "red";
-}
+// function loading() {
+//     document.querySelector(".content").classList.remove("display-none");
+//     loadingPage.classList.add("display-none");
+// }
 
-loadingPage.addEventListener("click", loading);
+setTimeout(() => loadingPage.style.background = "red", 5000);
