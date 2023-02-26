@@ -155,6 +155,13 @@ button {
     box-shadow: 0.5em 0.5em #E8F0FF,  -0.5em -0.5em rgb(233, 189, 231);
 }
 
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    .section1-text {
+        padding-top: 25vh;
+    }
+
+}
+
 @media only screen and (max-height: 800px) {
     .section1-image {
         display: none;
