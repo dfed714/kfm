@@ -10,6 +10,7 @@ const content = document.querySelector(".content");
 
 // LOADING SCREEN 
 function loadingScreen() {
+    if(!localStorage.getItem("loaded")) {
         localStorage.setItem("loaded", true);
         loadingPage.classList.remove("display-none");
         content.classList.add("display-none");
@@ -22,10 +23,16 @@ function loadingScreen() {
         }
     };
     setInterval(loading, 1000);
+    }
 }
 
 window.addEventListener("load", loadingScreen);
 
+window.addEventListener('onunload', (e) => {
+    e.preventDefault();
+    localStorage.removeItem("loaded");
+    return;
+  });
 
 
 // MENU 
@@ -36,4 +43,8 @@ hamburger.addEventListener("click", function() {
 
 xOut.addEventListener("click", function() {
     menu.classList.add("display-none");
+})
+
+homeBtn.addEventListener("click", function() {
+    localStorage.setItem("loaded", true);
 })
