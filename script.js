@@ -20,7 +20,7 @@ screen.orientation.addEventListener("change", function() {
 
 function loading() {
     document.querySelector(".loading-page").style.display = "none";
-    document.querySelector(".content").style.display = "block";
+    document.querySelector(".content").style.opacity = "1";
 }
 
 window.setTimeout(loading, 5000);

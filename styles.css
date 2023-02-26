@@ -92,7 +92,7 @@ a {
 }
 
 .content {
-    display: none;
+    opacity: 0;
 }
 
 
