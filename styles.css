@@ -390,7 +390,7 @@ p {
     justify-content: space-between;
     flex-direction: column-reverse;
     padding-inline: 5vw;
-    padding-block: 2vw;
+    padding-block: 5vw;
     font-size: var(--fs-l);
 }
 
@@ -404,7 +404,7 @@ p {
     list-style: none;
     display: flex;
     font-family: var(--gen-ff);
-    color: var(--fc-light)
+    color: var(--fc-light);
     font-size: var(--fs-s);
     gap: 1em;
     flex-direction: column;
