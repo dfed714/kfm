@@ -4,7 +4,7 @@ const slogan = document.querySelector(".slogan");
 
 function homeTextPadding() {
     if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height > 280) {
-        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 20)}px`;
+        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 5)}px`;
     } else if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height <= 280) {
         slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 75)}px`;
     }
@@ -13,4 +13,5 @@ homeTextPadding();
 
 screen.orientation.addEventListener("change", function() {
     location.reload();
+    homeTextPadding();
 })
