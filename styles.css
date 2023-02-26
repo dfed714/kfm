@@ -369,14 +369,14 @@ p {
 
     .content1-img-mobile, .content2-img-mobile, .content3-img-mobile {
         display: block;
-        width: 90%;
+        width: 100%;
     }
 }
 
 @media only screen and (max-width: 650px) {
     .content1-img-mobile, .content2-img-mobile, .content3-img-mobile {
         display: block;
-        width: 90%;
+        width: 100%;
     }
 }
 
