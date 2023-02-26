@@ -10,20 +10,23 @@ const content = document.querySelector(".content");
 
 // LOADING SCREEN 
 function loadingScreen() {
-    if(!localStorage.getItem("loaded")) {
-        console.log(document.referrer);
-        localStorage.setItem("loaded", true);
-        loadingPage.classList.remove("display-none");
-        content.classList.add("display-none");
-        let count = 0;
-    function loading() {
-        count++
-        if (count >= 3) {
-            content.classList.remove("display-none");
-            loadingPage.classList.add("display-none");
+    if (document.referrer.includes("kfm")) {
+        return
+    } else {
+        if(!localStorage.getItem("loaded")) {
+            localStorage.setItem("loaded", true);
+            loadingPage.classList.remove("display-none");
+            content.classList.add("display-none");
+            let count = 0;
+            function loading() {
+                count++
+                if (count >= 3) {
+                    content.classList.remove("display-none");
+                    loadingPage.classList.add("display-none");
+                }
+            };
+            setInterval(loading, 1000);
         }
-    };
-    setInterval(loading, 1000);
     }
 }
 
