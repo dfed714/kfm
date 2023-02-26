@@ -1,6 +1,7 @@
 const navbar = document.querySelector(".kfm-logo");
 const section1Text = document.querySelector(".section1-text");
 const slogan = document.querySelector(".slogan");
+const loadingPage = document.querySelector(".loading-page");
 
 // GALAXY FOLD RESPONSIVE 
 
@@ -19,9 +20,9 @@ screen.orientation.addEventListener("change", function() {
 // LOADING SCREEN 
 
 function loading() {
-    // document.querySelector(".content").classList.remove("display-none");
-    // document.querySelector(".loading-page").classList.add("display-none");
-    document.querySelector(".loading-page").style.background = "red";
+    document.querySelector(".content").classList.remove("display-none");
+    loadingPage.classList.add("display-none");
+    loadingPage.style.background = "red";
 }
 
-setTimeout(loading, 4000);
+loadingPage.addEventListener("click", loading);
