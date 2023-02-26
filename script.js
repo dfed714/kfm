@@ -7,7 +7,7 @@ function homeTextPadding() {
     console.log(navbar.offsetHeight + navbar.getBoundingClientRect().y);
     console.log(slogan.getBoundingClientRect().y);
     if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 5)) {
-        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 5)}px`;
+        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 10)}px`;
     }
 };
 homeTextPadding();
