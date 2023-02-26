@@ -118,7 +118,6 @@ button {
     gap: 2em;
     font-family: var(--gen-ff);
     color: var(--fc-light);
-    border: 2px solid red;
 }
 
 .section1-text h1 {
