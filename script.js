@@ -24,4 +24,4 @@ function loading() {
     document.querySelector(".loading-page").style.background = "red";
 }
 
-window.setTimeout(loading, 4000);
+setTimeout(loading, 4000);
