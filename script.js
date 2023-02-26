@@ -8,7 +8,7 @@ function homeTextPadding() {
     // } else if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height <= 280 && screen.height < screen.width) {
     //     slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 75)}px`;
     // }
-    if (screen.width > screen.height) {
+    if (window.innerWidth > window.innerHeight) {
         slogan.style.color = "red";
     }
 };
