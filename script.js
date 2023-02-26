@@ -10,20 +10,21 @@ const content = document.querySelector(".content");
 
 // LOADING SCREEN 
 function loadingScreen() {
-    if(!localStorage.getItem("loaded")) {
-        localStorage.setItem("loaded", true);
-        loadingPage.classList.remove("display-none");
-        content.classList.add("display-none");
+    if(!sessionStorage.getItem("loaded")) {
+        sessionStorage.setItem("loaded", true);
         let count = 0;
-    function loading() {
-        count++
-        if (count >= 3) {
-            content.classList.remove("display-none");
+        function loading() {
+            count++
+            if (count >= 3) {
+                content.classList.remove("display-none");
+                loadingPage.classList.add("display-none");
+            }
+        };
+        setInterval(loading, 1000);
+        } else {
             loadingPage.classList.add("display-none");
+            content.classList.remove("display-none");
         }
-    };
-    setInterval(loading, 1000);
-    }
 }
 
 window.addEventListener("load", loadingScreen);
