@@ -23,4 +23,4 @@ function loading() {
     document.querySelector(".loading-page").classList.add("display-none");
 }
 
-window.setTimeout(loading, 5000);
+window.onload = (e) => setTimeout(loading, 4000);
