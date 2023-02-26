@@ -19,8 +19,8 @@ screen.orientation.addEventListener("change", function() {
 // LOADING SCREEN 
 
 function loading() {
-    document.querySelector(".loading-page").style.display = "none";
-    document.querySelector(".content").style.display = "block";
+    document.querySelector(".loading-page").classList.add("display-none");
+    document.querySelector(".content").classList.remove("display-none");
 }
 
 window.setTimeout(loading, 5000);

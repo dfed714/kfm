@@ -91,7 +91,7 @@ a {
     animation: 5s fade-in;
 }
 
-.content {
+.display-none {
     display: none;
 }
 
