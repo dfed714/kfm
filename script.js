@@ -5,23 +5,29 @@ const loadingPage = document.querySelector(".loading-page");
 
 // GALAXY FOLD RESPONSIVE 
 
-function homeTextPadding() {
-    if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height <= 280) {
-        slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 10)}px`;
-    } 
-};
-homeTextPadding();
+// function homeTextPadding() {
+//     if (slogan.getBoundingClientRect().y < (navbar.offsetHeight + navbar.getBoundingClientRect().y + 10) && screen.height <= 280) {
+//         slogan.style.marginTop = `${(navbar.offsetHeight + navbar.getBoundingClientRect().y + 10)}px`;
+//     } 
+// };
+// homeTextPadding();
 
-screen.orientation.addEventListener("change", function() {
-    location.reload();
-    homeTextPadding();
-})
+// screen.orientation.addEventListener("change", function() {
+//     location.reload();
+//     homeTextPadding();
+// })
 
 // LOADING SCREEN 
 
-// function loading() {
-//     document.querySelector(".content").classList.remove("display-none");
-//     loadingPage.classList.add("display-none");
-// }
 
-setTimeout(() => loadingPage.style.background = "red", 5000);
+// setInterval(loading, 500);
+let count = 0;
+function loading() {
+    count++
+    if (count == 5) {
+        document.querySelector(".content").classList.remove("display-none");
+        loadingPage.classList.add("display-none");
+    }
+};
+setInterval(loading, 1000);
+
