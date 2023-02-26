@@ -26,7 +26,7 @@
 
     /* SECTION 2  */
     --s2-text-w: 45%;
-    --s2-text-gap: 2em;
+    --s2-text-gap: 1em;
 }
 
 /* GENERAL STYLING  */
@@ -177,15 +177,15 @@ button {
         display: none;
     }
 
-    /* .section1-text h3 {
+    .section1-text h3 {
         font-size: var(--fs-l);
-    } */
+    }
 
-    /* .section1-text {
+    .section1-text {
         height: 75%;
         width: 100%;
         justify-content: center;
-    } */
+    }
 
     .section1 {
         padding-right: 0;
@@ -211,6 +211,7 @@ button {
     height: fit-content;
     padding-inline: 5vw;
     padding-block: 10vw;
+    font-size: var(--fs-l);
 }
 
 .content-box img {
@@ -264,7 +265,7 @@ p {
 }
 
 .content1-img {
-    width: 40%;
+    width: 12em;
     /* box-shadow: 5px var(--color-pink), 5px var(--color-light-blue), 5px var(--color-pink), 5px var(--color-light-pink); */
     /* box-shadow: 5px 5px 10px black; */
 }
@@ -277,7 +278,7 @@ p {
 }
 
 .content2-img {
-    width: 40%;
+        width: 12em;
     /* box-shadow: 5px var(--color-pink), 5px var(--color-light-blue), 5px var(--color-pink), 5px var(--color-light-pink); */
     /* box-shadow: 5px 5px 10px black; */
 }
@@ -289,24 +290,12 @@ p {
 }
 
 .content3-img {
-    width: 40%;
+        width: 12em;
     /* box-shadow: 5px var(--color-pink), 5px var(--color-light-blue), 5px var(--color-pink), 5px var(--color-light-pink); */
     /* box-shadow: 5px 5px 10px black; */
 }
 
-@media only screen and (max-width: 1000px) {
-    .content1-img, .content2-img, .content3-img {
-        height: 70%;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .content1-img, .content2-img, .content3-img {
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
     .content-box {
     flex-direction: column;
     gap: 2em;
