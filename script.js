@@ -20,7 +20,8 @@ screen.orientation.addEventListener("change", function() {
 
 function loading() {
     // document.querySelector(".content").classList.remove("display-none");
-    document.querySelector(".loading-page").classList.add("display-none");
+    // document.querySelector(".loading-page").classList.add("display-none");
+    document.querySelector(".loading-page").style.background = "red";
 }
 
 window.setTimeout(loading, 4000);
