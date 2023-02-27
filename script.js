@@ -22,10 +22,10 @@ function loadingScreen() {
             }
         };
         setInterval(loading, 1000);
+        clearInterval();
         } else {
             loadingPage.classList.add("display-none");
             content.classList.remove("display-none");
-            clearInterval();
         }
 }
 
