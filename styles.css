@@ -58,13 +58,13 @@ button {
     margin: 4px;
 }
 
-button:hover {
+button:hover, button:focus {
     border-width: 4px;
     font-size: calc(var(--fs-s) + 2px);
     padding: calc(var(--btn-padding) - 4px);
 }
 
-.section1-btn:hover {
+.section1-btn:hover, .section1-btn:focus {
     margin-top: 0;
 }
 
@@ -183,7 +183,7 @@ a {
     transition-duration: 250ms;
 }
 
-.menu ul li:hover, .x-out:hover, .hamburger-icon:hover {
+.menu ul li:hover, .x-out:hover, .hamburger-icon:hover, .menu ul li:focus, .x-out:focus, .hamburger-icon:focus  {
     color: var(--hover-clr);
 }
 
@@ -249,7 +249,7 @@ a {
     margin-top: 1vw
 }
 
-.left-list a:hover {
+.left-list a:hover, .left-list a:focus {
     color: var(--hover-clr);
 }
 
@@ -557,7 +557,7 @@ p {
     align-items: flex-start;
 }
 
-.footer a:hover {
+.footer a:hover, .footer a:focus {
     color: var(--hover-clr);
 }
 
