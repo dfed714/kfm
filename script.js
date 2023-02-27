@@ -48,7 +48,7 @@ function hamburgerFunc() {
         } 
     };
     console.log(menuCount);
-    setInterval(menuFunc, 500);
+    setInterval(menuFunc, 100);
 }
 
 xOut.addEventListener("click", function() {
