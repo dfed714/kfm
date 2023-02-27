@@ -25,6 +25,7 @@ function loadingScreen() {
         } else {
             loadingPage.classList.add("display-none");
             content.classList.remove("display-none");
+            clearInterval();
         }
 }
 
