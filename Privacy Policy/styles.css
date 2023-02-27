@@ -216,7 +216,7 @@ button:hover, button:active {
 }
 
 .left-list a {
-    color: var(--logo-color);
+    color: var(--fc-light);
 }
 
 .left-list a:hover, .left-list a:active {
