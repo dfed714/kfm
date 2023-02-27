@@ -5,7 +5,7 @@
     --fs-l: clamp(26px, 3.5vw, 3.5rem);
     --fs-m: clamp(20px, 2.25vw, 2rem);
     --fs-s: clamp(16px, 1.5vw, 1.25rem);
-    --fs-para: clamp(20px, 1.25vw, 1.5rem);
+    --fs-para: clamp(16px, 1.25vw, 1.5rem);
     --fw-thick: 800;
     --fw-medium: 600;
     --fw-thin: 300;
@@ -17,6 +17,7 @@
     --color-light-pink: rgb(233, 189, 231);
     --color-light-blue: #E8F0FF;
     --left-list-width: 5%;
+    --hover-clr: rgba(255, 255, 255, 0.564);
 
     /* BUTTONS  */
     --btn-bg: transparent;
@@ -52,6 +53,19 @@ button {
     padding: var(--btn-padding);
     font-family: var(--gen-ff);
     cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in;
+    margin: 4px;
+}
+
+button:hover {
+    border-width: 4px;
+    font-size: calc(var(--fs-s) + 2px);
+    padding: calc(var(--btn-padding) - 4px);
+}
+
+.section1-btn:hover {
+    margin-top: 0;
 }
 
 a {
@@ -71,11 +85,11 @@ a {
 
 @keyframes slide-from-right {
     from {
-        margin-left: 1000px;
+        transform: translateX(100%);
     }
 
     to {
-        margin-left: 0;
+        transform: translateX(0%);
     }
 }
 
@@ -115,7 +129,7 @@ a {
     z-index: 9999;
 }
 
-.loading-page img {
+.loading-img {
     max-width: max(10%, 100px);
     animation: 5s fade-in;
 }
@@ -124,10 +138,13 @@ a {
 .x-out {
     width: 100%;
     text-align: end;
-    font-size: clamp(26px, 10vw, 7rem);
-    padding-block: 0.75em;
-    padding-right: 0.75em;
+    font-size: clamp(1.75rem, 3.5vw, 7rem);
+    margin-top: 0.5em;
+    color: var(--fc-light);
+    padding-block: 1rem;
+    padding-right: 2rem;
     cursor: pointer;
+    transition-duration: 250ms;
 }
 
 .menu {
@@ -137,11 +154,11 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: absolute;
+    position: fixed;
     top: 0;
+    right: 0;
     z-index: 2;
     background-color: var(--logo-color);
-    color: var(--fc-light);
     padding-left: 2em;
     font-size: var(--fs-l);
     animation: 0.5s slide-from-right;
@@ -158,10 +175,26 @@ a {
 }
 
 .menu ul li {
+    color: var(--fc-light);
     width: 100%;
     font-family: var(--gen-ff);
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--fc-light);
+    transition-duration: 250ms;
+}
+
+.menu ul li:hover, .x-out:hover, .hamburger-icon:hover {
+    color: var(--hover-clr);
+}
+
+@media only screen and (min-width: 900px) {
+    .menu {
+        width: 35%;
+    }
+
+    .x-out {
+        padding-right: calc(2rem + 0.5em);
+    }
 }
 
 
@@ -216,15 +249,20 @@ a {
     margin-top: 1vw
 }
 
+.left-list a:hover {
+    color: var(--hover-clr);
+}
+
 .left-list img {
     width: 3.75em;
 }
 
 .hamburger-icon {
     font-size: clamp(1.75rem, 3.5vw, 7rem);
-    color: var(--fc-light);
     margin-top: 0.5em;
+    color: var(--fc-light);
     cursor: pointer;
+    transition-duration: 250ms;
 }
 
 @media only screen and (min-width: 900px) {
@@ -266,6 +304,10 @@ a {
 .section1-text h3 {
     font-size: var(--fs-m);
     font-weight: var(--fw-thin);
+}
+
+.section1-btn {
+    margin-top: 2px;
 }
 
 .section1-btn, .content1 button {
@@ -513,6 +555,10 @@ p {
 
 .footer-contact-list {
     align-items: flex-start;
+}
+
+.footer a:hover {
+    color: var(--hover-clr);
 }
 
 /* UTILITY CLASSES  */
