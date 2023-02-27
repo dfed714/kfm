@@ -127,11 +127,14 @@ a {
 
 .x-out {
     width: 100%;
-    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-size: clamp(1.75rem, 3.5vw, 7rem);
     margin-top: 0.5em;
     color: var(--fc-light);
-    padding-block: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 21px;
     padding-right: 2rem;
     cursor: pointer;
     transition-duration: 250ms;
@@ -183,14 +186,15 @@ a {
     }
 
     .x-out {
-        padding-right: calc(2rem + 0.5em);
+        padding-right: calc(2rem + 0.25em);
+        padding-block: 1rem;
     }
 }
 
 
 @media screen and (max-height: 450px) and (orientation: landscape) {
     .x-out {
-    font-size: clamp(16px, 10vw, 2rem);
+        font-size: clamp(16px, 10vw, 2rem);
     }
     .menu {
         font-size: var(--fs-m);
@@ -220,7 +224,7 @@ a {
     top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 5vw;
     padding-right: 2em;
     padding-top: 1em;
@@ -236,7 +240,6 @@ a {
     font-size: var(--fs-m);
     color: var(--fc-light);
     width: 7.5em;
-    margin-top: 1vw
 }
 
 .left-list a:hover, .left-list a:active {
@@ -248,8 +251,7 @@ a {
 }
 
 .hamburger-icon {
-    font-size: clamp(1.75rem, 3.5vw, 7rem);
-    margin-top: 0.5em;
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
     color: var(--fc-light);
     cursor: pointer;
     transition-duration: 250ms;
@@ -319,7 +321,7 @@ a {
     object-position: right top;
     width: 100%;
     height: 100%;
-    box-shadow: 0.5em 0.5em #E8F0FF,  -0.5em -0.5em rgb(233, 189, 231);
+    box-shadow: 0.5em 0.5em var(--fc-light),  -0.5em -0.5em var(--color-light-pink);
 }
 
 @media only screen and (max-height: 650px) and (orientation: landscape) {
