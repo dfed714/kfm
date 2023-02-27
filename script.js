@@ -38,10 +38,8 @@ hamburger.addEventListener("click", hamburgerFunc);
 
 function hamburgerFunc() {
         menu.classList.remove("display-none");
-        setTimeout(function() {
-            content.classList.add("display-none");
-            footer.classList.add("display-none");
-        }, 500)
+        content.classList.add("display-none");
+        footer.classList.add("display-none");
 }
 
 xOut.addEventListener("click", function() {
