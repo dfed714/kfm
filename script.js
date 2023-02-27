@@ -7,6 +7,7 @@ const xOut = document.querySelector(".x-out");
 const hamburger = document.querySelector(".hamburger-icon");
 const homeBtn = document.querySelector(".home-btn");
 const content = document.querySelector(".content");
+const footer = document.querySelector(".footer");
 
 // LOADING SCREEN 
 function loadingScreen() {
@@ -32,10 +33,18 @@ window.addEventListener("load", loadingScreen);
 
 // MENU 
 
-hamburger.addEventListener("click", function() {
-    menu.classList.remove("display-none");
-})
+hamburger.addEventListener("click", hamburgerFunc);
+
+function hamburgerFunc() {
+        menu.classList.remove("display-none");
+        setTimeout(function() {
+            content.classList.add("display-none");
+            footer.classList.add("display-none");
+        }, 500)
+}
 
 xOut.addEventListener("click", function() {
     menu.classList.add("display-none");
+    content.classList.remove("display-none");
+    footer.classList.remove("display-none");
 })
