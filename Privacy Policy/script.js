@@ -48,11 +48,3 @@ xOut.addEventListener("click", function() {
         menu.classList.add("display-none");
     }
 });
-
-// MARGIN TOP 
-
-function marginTop() {
-    content.style.paddingTop = `${navbar.getClientRects()[0].y + navbar.getClientRects()[0].height + 30}px`;
-};
-
-marginTop();
