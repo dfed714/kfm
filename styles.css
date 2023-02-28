@@ -112,6 +112,31 @@ a {
     }
 }
 
+/* GET IN TOUCH MODAL  */
+
+.contact-modal {
+    width: 40%;
+    height: 40%;
+    position: fixed;
+    right: 30%;
+    top: 30%;
+    z-index: 9999;
+    border-radius: 1rem;
+    background-color: var(--logo-color);
+    box-shadow: 0 0 0 30vw rgba(0, 0, 0, 0.5);
+    animation: 250ms fade-in;
+}
+
+.x-out-modal {
+    color: var(--fc-light);
+    font-size: var(--fs-m);
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+}
+
+
 /* LOADING PAGE  */
 
 .loading-page {

@@ -10,18 +10,35 @@ const content = document.querySelector(".content");
 const footer = document.querySelector(".footer");
 const section2 = document.querySelector(".section2");
 const loadingImg = document.querySelector(".loading-img");
+const getInTouch = document.querySelector(".section1-btn");
+const xOutModal = document.querySelector(".x-out-modal");
+const getInTouchModal = document.querySelector(".contact-modal");
+
+// DISABLE SCROLLING 
+
+function disableScrolling() {
+    document.documentElement.style.overflowY = "clip";
+}
+
+// ENABLE SCROLLING 
+
+function enableScrolling() {
+    document.documentElement.style.overflowY = "auto";
+}
 
 // LOADING SCREEN 
+
 let loadingCount = 0;
 let loadingInterval = setInterval(loading, 1000);
 
 function loading() {
     loadingCount++
         if (loadingCount >= 3) {
-            section2.classList.remove("display-none");
-            footer.classList.remove("display-none");
+            enableScrolling();
             loadingPage.classList.add("display-none");
             clearInterval(loadingInterval);
+        } else {
+            disableScrolling();
         }
 };
 
@@ -29,10 +46,10 @@ function loading() {
 function loadingScreen() {
     if(!sessionStorage.getItem("loaded")) {
         sessionStorage.setItem("loaded", true);
+        disableScrolling();
     } else {
         loadingPage.classList.add("display-none");
-        section2.classList.remove("display-none");
-        footer.classList.remove("display-none");
+        enableScrolling();
     }
 }
 
@@ -45,8 +62,7 @@ hamburger.addEventListener("click", hamburgerFunc);
 function hamburgerFunc() {
     if (window.innerWidth < 900) {
         menu.classList.remove("display-none");
-        section2.classList.add("display-none");
-        footer.classList.add("display-none");
+        disableScrolling();
     } else {
         menu.classList.remove("display-none");
     }
@@ -55,9 +71,23 @@ function hamburgerFunc() {
 xOut.addEventListener("click", function() {
     if (window.innerWidth < 900) {
         menu.classList.add("display-none");
-        section2.classList.remove("display-none");
-        footer.classList.remove("display-none");
+        enableScrolling();
     } else {
         menu.classList.add("display-none");
     }
 })
+
+// GET IN TOUCH MODAL 
+
+getInTouch.addEventListener("click", function() {
+    getInTouchModal.classList.remove("display-none");
+    content.style.pointerEvents = "none";
+    disableScrolling();
+})
+
+xOutModal.addEventListener("click", function() {
+    getInTouchModal.classList.add("display-none");
+    content.style.pointerEvents = "auto";
+    enableScrolling();
+})
+
