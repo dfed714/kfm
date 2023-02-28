@@ -93,6 +93,7 @@ button {
     padding-right: 2rem;
     cursor: pointer;
     transition-duration: 250ms;
+    transition-property: color;
 }
 
 .menu {
@@ -129,6 +130,7 @@ button {
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--fc-light);
     transition-duration: 250ms;
+    transition-property: font-size;
 }
 
 .x-out:hover,  .x-out:active  {
@@ -190,6 +192,7 @@ button {
     padding-right: 2em;
     padding-top: 1em;
     z-index: 1;
+    transition-property: color;
 }
 
 
@@ -267,6 +270,10 @@ button {
 .footer-contact-list {
     flex-direction: column;
     align-items: flex-start;
+}
+
+.footer a {
+    transition-property: color;
 }
 
 .footer a:hover, .footer a:active {

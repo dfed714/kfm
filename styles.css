@@ -55,6 +55,7 @@ button {
     cursor: pointer;
     transition-duration: 250ms;
     transition-timing-function: ease-in;
+    transition-property: background-color, color;
 }
 
 .section1-btn:hover, .section1-btn:active {
@@ -63,17 +64,17 @@ button {
 }
 
 .content1 button:hover, .content1 button:active {
-    background: var(--fc-light);
+    background-color: var(--fc-light);
     color: var(--logo-color);
 }
 
 .content2 button:hover, .content2 button:active  {
-    background: var(--fc-dark);
+    background-color: var(--fc-dark);
     color: var(--color-light-blue);
 }
 
 .content3 button:hover, .content3 button:active  {
-    background: var(--fc-dark);
+    background-color: var(--fc-dark);
     color: var(--color-light-pink);
 }
 
@@ -102,19 +103,45 @@ a {
     }
 }
 
-@keyframes slide-from-right {
+@keyframes slide-right {
     from {
-        transform: translateX(100%);
+        transform: translateX(-200%);
+        opacity: 0;
     }
 
     to {
         transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
 
 /* GET IN TOUCH MODAL  */
 
-.contact-modal {
+/* .contact-modal {
     width: 40%;
     height: 300px;
     position: fixed;
@@ -144,7 +171,7 @@ a {
     top: 1%;
     right: 1%;
     cursor: pointer;
-}
+} */
 
 
 /* LOADING PAGE  */
@@ -186,6 +213,7 @@ a {
     padding-right: 2rem;
     cursor: pointer;
     transition-duration: 250ms;
+    transition-property: color;
 }
 
 .menu {
@@ -222,6 +250,7 @@ a {
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--fc-light);
     transition-duration: 250ms;
+    transition-property: font-size;
 }
 
 .x-out:hover, .hamburger-icon:hover, .x-out:active, .hamburger-icon:active  {
@@ -229,7 +258,7 @@ a {
 }
 
 .menu ul li:hover, .menu ul li:active {
-    font-size: 2em;;
+    font-size: 2em;
 }
 
 @media only screen and (min-width: 900px) {
@@ -281,6 +310,7 @@ a {
     padding-right: 2em;
     padding-top: 1em;
     z-index: 1;
+    animation: 1000ms slide-down ease-out
 }
 
 
@@ -311,6 +341,7 @@ a {
     color: var(--fc-light);
     cursor: pointer;
     transition-duration: 250ms;
+    transition-property: color;
 }
 
 @media only screen and (min-width: 900px) {
@@ -339,6 +370,7 @@ a {
     gap: 1.25em;
     font-family: var(--gen-ff);
     color: var(--fc-light);
+    animation: 1000ms slide-right ease-out
 }
 
 .section1-text h1 {
@@ -369,6 +401,7 @@ a {
     align-items: center;
     height: 10em;
     font-size: var(--fs-slogan);
+    animation: 1000ms slide-left ease-out;
 }
 
 .section1-image img {

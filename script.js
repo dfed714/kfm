@@ -1,5 +1,4 @@
 const navbar = document.querySelector(".kfm-logo");
-const section1Text = document.querySelector(".section1-text");
 const slogan = document.querySelector(".slogan");
 const loadingPage = document.querySelector(".loading-page");
 const menu = document.querySelector(".menu");
@@ -13,6 +12,9 @@ const loadingImg = document.querySelector(".loading-img");
 const getInTouch = document.querySelector(".section1-btn");
 const xOutModal = document.querySelector(".x-out-modal");
 const getInTouchModal = document.querySelector(".contact-modal");
+const section1Text = document.querySelector(".section1-text");
+const section1Img = document.querySelector(".section1-image");
+const topList = document.querySelector(".top-list");
 
 // DISABLE SCROLLING 
 
@@ -37,19 +39,23 @@ function loading() {
             enableScrolling();
             loadingPage.classList.add("display-none");
             clearInterval(loadingInterval);
-        } else {
-            disableScrolling();
-        }
+        } 
 };
 
 
 function loadingScreen() {
     if(!sessionStorage.getItem("loaded")) {
+        section1Text.style.animationDelay = "2000ms";
+        section1Img.style.animationDelay = "2000ms";
+        topList.style.animationDelay = "2000ms";
         sessionStorage.setItem("loaded", true);
         disableScrolling();
     } else {
         loadingPage.classList.add("display-none");
         enableScrolling();
+        section1Text.style.animationDelay = "0";
+        section1Img.style.animationDelay = "0";
+        topList.style.animationDelay = "0"
     }
 }
 
@@ -79,15 +85,15 @@ xOut.addEventListener("click", function() {
 
 // GET IN TOUCH MODAL 
 
-getInTouch.addEventListener("click", function() {
-    getInTouchModal.classList.remove("display-none");
-    content.style.pointerEvents = "none";
-    disableScrolling();
-})
+// getInTouch.addEventListener("click", function() {
+//     getInTouchModal.classList.remove("display-none");
+//     content.style.pointerEvents = "none";
+//     disableScrolling();
+// })
 
-xOutModal.addEventListener("click", function() {
-    getInTouchModal.classList.add("display-none");
-    content.style.pointerEvents = "auto";
-    enableScrolling();
-})
+// xOutModal.addEventListener("click", function() {
+//     getInTouchModal.classList.add("display-none");
+//     content.style.pointerEvents = "auto";
+//     enableScrolling();
+// })
 
