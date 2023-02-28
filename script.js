@@ -13,23 +13,26 @@ const loadingImg = document.querySelector(".loading-img");
 
 // LOADING SCREEN 
 let loadingCount = 0;
+let loadingInterval = setInterval(loading, 1000);
 
 function loading() {
     loadingCount++
-        if (loadingCount >= 4) {
+        if (loadingCount >= 3) {
+            section2.classList.remove("display-none");
+            footer.classList.remove("display-none");
             loadingPage.classList.add("display-none");
             clearInterval(loadingInterval);
         }
 };
 
-let loadingInterval = setInterval(loading, 1000);
 
 function loadingScreen() {
     if(!sessionStorage.getItem("loaded")) {
         sessionStorage.setItem("loaded", true);
     } else {
         loadingPage.classList.add("display-none");
-        content.classList.remove("display-none");
+        section2.classList.remove("display-none");
+        footer.classList.remove("display-none");
     }
 }
 

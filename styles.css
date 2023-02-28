@@ -126,8 +126,8 @@ a {
     justify-content: center;
     position: absolute;
     z-index: 9999;
-    animation: 1s fade-out;
-    animation-delay: 3000ms;
+    animation: 500ms fade-out;
+    animation-delay: 2500ms;
 
 }
 
