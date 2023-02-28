@@ -116,16 +116,26 @@ a {
 
 .contact-modal {
     width: 40%;
-    height: 40%;
+    height: 300px;
     position: fixed;
     right: 30%;
     top: 30%;
     z-index: 9999;
     border-radius: 1rem;
     background-color: var(--logo-color);
-    box-shadow: 0 0 0 30vw rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 300vw rgba(0, 0, 0, 0.5);
     animation: 250ms fade-in;
+    padding-block: 2em;
+    color: var(--fc-light);
 }
+
+@media screen and (max-width: 900px) {
+    .contact-modal {
+        width: 60%;
+        right: 20%;
+    }
+}
+
 
 .x-out-modal {
     color: var(--fc-light);
