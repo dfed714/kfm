@@ -558,22 +558,29 @@ p {
     color: var(--fc-light);
     font-size: var(--fs-s);
     gap: 1em;
-    flex-direction: column;
 }
 
 .footer-docs-list {
     width: 100%;
     justify-content: space-between;
     margin-top: 3em;
+    flex-direction: column;
     font-size: clamp(9px, 1.5vw, 1.25rem);
 }
 
 .footer-contact-list {
+    flex-direction: column;
     align-items: flex-start;
 }
 
 .footer a:hover, .footer a:active {
     color: var(--hover-clr);
+}
+
+.footer-icon-list {
+    display: flex;
+    width: fit-content;
+    margin-top: 1em;
 }
 
 /* UTILITY CLASSES  */
