@@ -209,7 +209,7 @@ a {
 
 }
 
-@media screen and (max-height: 281px) and (orientation: landscape) {
+@media screen and (max-height: 281px) {
     .menu {
         font-size: var(--fs-s);
     }
@@ -355,10 +355,10 @@ a {
     }
 }
 
-@media only screen and (max-height: 281px) and (orientation: landscape) {
+@media screen and (max-height: 281px) {
     .section1-text {
-        margin-top: 50px;
-        padding-bottom: 10px;
+        margin-top: 2.5em;
+        padding-bottom: 1em;
     }
 
     .section1 {
