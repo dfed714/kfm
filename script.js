@@ -16,11 +16,10 @@ let loadingCount = 0;
 
 function loading() {
     loadingCount++
-    if (loadingCount >= 3) {
-        content.classList.remove("display-none");
-        loadingPage.classList.add("display-none");
-        clearInterval(loadingInterval);
-    }
+        if (loadingCount >= 4) {
+            loadingPage.classList.add("display-none");
+            clearInterval(loadingInterval);
+        }
 };
 
 let loadingInterval = setInterval(loading, 1000);

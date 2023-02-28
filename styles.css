@@ -92,6 +92,16 @@ a {
     }
 }
 
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes slide-from-right {
     from {
         transform: translateX(100%);
@@ -116,6 +126,9 @@ a {
     justify-content: center;
     position: absolute;
     z-index: 9999;
+    animation: 1s fade-out;
+    animation-delay: 3000ms;
+
 }
 
 .loading-img {
