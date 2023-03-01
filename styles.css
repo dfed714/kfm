@@ -425,12 +425,26 @@ a {
 
 @media only screen and (max-height: 650px) and (orientation: landscape) {
     .section1-text {
-        padding-top: 22.5vh;
+        padding-top: 15vh;
     }
     
 }
 
-@media only screen and (max-height: 800px) and (min-width: 1300px) {
+@media only screen and (max-height: 450px) and (orientation: landscape) {
+    .section1-text {
+        padding-top: 20vh;
+    }
+    
+}
+
+@media only screen and (max-height: 400px) and (orientation: landscape) {
+    .section1-text {
+        padding-top: 25vh;
+    }
+    
+}
+
+@media only screen and (max-height: 800px) and (min-width: 1200px) {
     .section1-image {
         height: 80%;
     }
@@ -452,7 +466,7 @@ a {
     }
 }
 
-@media screen and (max-height: 281px) {
+@media screen and (max-height: 331px) {
     .section1-text {
         margin-top: 2.5em;
         padding-bottom: 1em;
@@ -491,11 +505,41 @@ a {
 
 @media only screen and (min-width: 2000px) {
     :root {
+        --fs-slogan: clamp(40px, 5vw, 5rem);
+        --fs-l: clamp(26px, 3.5vw, 4rem);
+        --fs-m: clamp(22px, 2.25vw, 3rem);
+        --fs-s: clamp(16px, 1.5vw, 1.5rem);
+        --fs-para: clamp(20px, 1.25vw, 2rem);
+    } 
+
+    .hamburger-icon {
+        font-size: clamp(1.75rem, 3.5vw, 5rem);
+        margin-bottom: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    :root {
         --fs-slogan: clamp(40px, 5vw, 8rem);
         --fs-l: clamp(26px, 3.5vw, 7rem);
         --fs-m: clamp(22px, 2.25vw, 5rem);
         --fs-s: clamp(16px, 1.5vw, 3rem);
         --fs-para: clamp(20px, 1.25vw, 3rem);
+    } 
+
+    .hamburger-icon {
+        font-size: clamp(1.75rem, 3.5vw, 5rem);
+        margin-bottom: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    :root {
+        --fs-slogan: clamp(40px, 5vw, 10rem);
+        --fs-l: clamp(26px, 3.5vw, 9rem);
+        --fs-m: clamp(22px, 2.25vw, 7rem);
+        --fs-s: clamp(16px, 1.5vw, 5rem);
+        --fs-para: clamp(20px, 1.25vw, 5rem);
     } 
 
     .hamburger-icon {
