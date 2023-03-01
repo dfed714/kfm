@@ -682,7 +682,8 @@ p {
     justify-content: space-between;
     flex-direction: column-reverse;
     padding-inline: 5vw;
-    padding-block: clamp(1rem, 5vw, 2rem);
+    padding-top: clamp(1rem, 5vw, 2rem);
+    padding-bottom: 10vh;
     font-size: var(--fs-l);
 }
 
