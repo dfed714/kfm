@@ -430,7 +430,13 @@ a {
     
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 800px) and (min-width: 1300px) {
+    .section1-image {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-height: 700px) {
     .section1-image {
         display: none;
     }
