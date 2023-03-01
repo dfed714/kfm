@@ -81,7 +81,7 @@ xOut.addEventListener("click", function() {
     } else {
         menu.classList.add("display-none");
     }
-})
+});
 
 // GET IN TOUCH MODAL 
 
@@ -97,3 +97,6 @@ xOut.addEventListener("click", function() {
 //     enableScrolling();
 // })
 
+(function heightWidth() {
+    console.log(screen.width, screen.height, window.innerHeight, window.innerWidth);
+})();
