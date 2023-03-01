@@ -139,6 +139,16 @@ a {
     }
 }
 
+@keyframes slide-from-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
 /* GET IN TOUCH MODAL  */
 
 /* .contact-modal {
