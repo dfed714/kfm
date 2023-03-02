@@ -354,6 +354,27 @@ a {
     }
 }
 
+/* CONTENT  */
+
+.banner-bg {
+    font-size: clamp(40px, 7vw, 10rem);
+    height: 4em;
+    background-image: url(/photos/stationary.png);
+    background-size: cover;
+    background-position: top;
+    filter: opacity(50%);
+}
+
+.banner-text {
+    height: 4em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: clamp(40px, 7vw, 10rem);
+}
+
 /* FOOTER  */
 
 .footer {
