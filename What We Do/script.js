@@ -5,15 +5,9 @@ const hamburger = document.querySelector(".hamburger-icon");
 const homeBtn = document.querySelector(".home-btn");
 const content = document.querySelector(".content");
 const footer = document.querySelector(".footer");
-const part2 = document.querySelector(".part-2");
-const part3 = document.querySelector(".part-3");
-const part4 = document.querySelector(".part-4");
-const part5 = document.querySelector(".part-5");
-const part6 = document.querySelector(".part-6");
-const part7 = document.querySelector(".part-7");
-const part8 = document.querySelector(".part-8");
-const part9 = document.querySelector(".part-9");
-
+const xOutModal = document.querySelector(".x-out-modal");
+const getInTouchModal = document.querySelector(".contact-modal");
+const topList = document.querySelector(".top-list");
 
 // DISABLE SCROLLING 
 
@@ -26,7 +20,6 @@ function disableScrolling() {
 function enableScrolling() {
     document.documentElement.style.overflowY = "auto";
 }
-
 
 // MENU 
 
@@ -49,3 +42,17 @@ xOut.addEventListener("click", function() {
         menu.classList.add("display-none");
     }
 });
+
+// GET IN TOUCH MODAL 
+
+// getInTouch.addEventListener("click", function() {
+//     getInTouchModal.classList.remove("display-none");
+//     content.style.pointerEvents = "none";
+//     disableScrolling();
+// })
+
+// xOutModal.addEventListener("click", function() {
+//     getInTouchModal.classList.add("display-none");
+//     content.style.pointerEvents = "auto";
+//     enableScrolling();
+// })
