@@ -128,6 +128,7 @@ a {
 .modal {
     width: fit-content;
     height: fit-content;
+    max-height: 85vh;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -151,6 +152,10 @@ a {
     display: grid;
     place-items: center;
     font-size: var(--fs-l);
+}
+
+.modal .icon {
+    border: none;
 }
 
 .modal h3 {
