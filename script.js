@@ -19,7 +19,7 @@ const topList = document.querySelector(".top-list");
 // DISABLE SCROLLING 
 
 function disableScrolling() {
-    document.documentElement.style.overflowY = "clip";
+    document.documentElement.style.overflowY = "hidden";
 }
 
 // ENABLE SCROLLING 

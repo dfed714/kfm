@@ -18,7 +18,7 @@ const part9 = document.querySelector(".part-9");
 // DISABLE SCROLLING 
 
 function disableScrolling() {
-    document.documentElement.style.overflowY = "clip";
+    document.documentElement.style.overflowY = "hidden";
 }
 
 // ENABLE SCROLLING 
