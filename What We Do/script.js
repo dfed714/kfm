@@ -55,6 +55,7 @@ icons.forEach(x => x.addEventListener("click", function(e) {
         theModal += e.target.parentElement.nextElementSibling.textContent;
     }
     disableScrolling();
+    content.style.pointerEvents = "none";
     document.querySelector(`.${theModal.split(" ").join("-")}`).classList.remove("display-none");
 }));
 

@@ -129,6 +129,7 @@ a {
     width: fit-content;
     height: fit-content;
     max-height: 85vh;
+    max-width: 85vw;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -142,6 +143,7 @@ a {
     justify-content: center;
     align-items: center;
     padding-block: 5vw;
+    font-family: var(--gen-ff);
 }
 
 .icon {
@@ -167,13 +169,19 @@ a {
 .modal p {
     text-align: center;
     width: 75%;
-    font-size: var(--fs-para);
+    font-size: var(--fs-m);
+}
+
+@media only screen and (max-width: 500px), screen and (max-height: 500px) {
+    .modal p {
+        font-size: var(--fs-s);
+    }
 }
 
 
 .x-out-modal {
     color: var(--fc-light);
-    font-size: var(--fs-m);
+    font-size: var(--fs-l);
     position: absolute;
     top: 1%;
     right: 1%;
@@ -498,21 +506,79 @@ a {
     }
 }
 
-.intro {
-    background: var(--color-purple);
+/* .intro {
+    background: var(--color-light-pink);
     padding-block: 7.5vw;
     padding-inline: 5vw;
+}
+
+.intro h1 {
+    font-size: var(--fs-l);
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: var(--fc-dark);
+}
+
+.intro:nth-of-type(2) {
+    background: var(--color-light-blue);
 }
 
 .intro > h2 {
     font-size: var(--fs-m);
     margin-inline: auto;
-    color: var(--fc-light);
+    color: var(--fc-dark);
     font-weight: var(--fw-thin);
 }
 
 .intro h2:not(:first-child) {
     padding-top: 2vw;
+} */
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--gen-ff);
+    color: var(--fc-dark);
+}
+
+
+.intro h1 {
+    font-size: var(--fs-m);
+    margin-block: 1em;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: var(--fs-para);
+    padding-block: 1em;
+    line-height: 150%;
+}
+
+.intro div {
+    width: 50%;
+    padding: 5vw;
+}
+
+.intro div:first-child {
+    background: var(--color-light-blue);
+}
+
+.intro div:nth-child(2) {
+    background: var(--color-light-pink);
+}
+
+@media only screen and (max-width: 1075px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro div {
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: var(--fs-l);
+    }
 }
 
 .container1 {
@@ -520,7 +586,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     padding-inline: 5vw;
-    padding-top: 5vw;
+    padding-top: 2vw;
     color: var(--fc-light);
     background: var(--logo-color);
 }
@@ -536,6 +602,11 @@ a {
     color: var(--fc-light);
     padding-top: 1em;
     padding-inline: 2vw;
+}
+
+.section2 h1:nth-child(2) {
+    font-size: var(--fs-m);
+
 }
 
 .container1 div {
@@ -609,38 +680,11 @@ a {
     }
 }
 
-/* @media only screen and (max-width: 400px) {
-
-    .container1 {
-        flex-direction: column;
-        align-items: center;
-        gap: 3em;
-    }
-
-    .container1 div {
-        width: 90%;
-    }
-
-    .container1 div div {
-        width: 10%;
-    }
-
-    .container1 div h3 {
-        text-align: center;
-        font-size: var(--fs-slogan);
-    }
-    
-    .container1 div p {
-        text-align: center;
-        font-size: var(--fs-l);
-    }
-} */
-
 /* FOOTER  */
 
 .footer {
     width: 100%;
-    background: var(--logo-color);
+    background: var(--color-purple);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
