@@ -6,7 +6,8 @@ const homeBtn = document.querySelector(".home-btn");
 const content = document.querySelector(".content");
 const footer = document.querySelector(".footer");
 const xOutModal = document.querySelector(".x-out-modal");
-const getInTouchModal = document.querySelector(".contact-modal");
+const modal = document.querySelector(".modal");
+const icons = document.querySelectorAll(".icon")
 const topList = document.querySelector(".top-list");
 
 // DISABLE SCROLLING 
@@ -45,14 +46,14 @@ xOut.addEventListener("click", function() {
 
 // GET IN TOUCH MODAL 
 
-// getInTouch.addEventListener("click", function() {
-//     getInTouchModal.classList.remove("display-none");
-//     content.style.pointerEvents = "none";
-//     disableScrolling();
-// })
+icons.forEach(x => x.addEventListener("click", function() {
+    modal.classList.remove("display-none");
+    content.style.pointerEvents = "none";
+    disableScrolling();
+}));
 
-// xOutModal.addEventListener("click", function() {
-//     getInTouchModal.classList.add("display-none");
-//     content.style.pointerEvents = "auto";
-//     enableScrolling();
-// })
+xOutModal.addEventListener("click", function() {
+    modal.classList.add("display-none");
+    content.style.pointerEvents = "auto";
+    enableScrolling();
+})

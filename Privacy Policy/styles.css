@@ -14,7 +14,7 @@
     --fc-light: whitesmoke;
     --color-purple: #88498F;
     --color-pink: #F7ACCF;
-    --color-light-pink: rgb(234, 177, 231);
+    --color-light-pink: rgb(233, 189, 231);
     --color-light-blue: #E8F0FF;
     --left-list-width: 5%;
     --hover-clr: rgba(255, 255, 255, 0.564);
@@ -39,11 +39,6 @@ html {
     overflow-x: clip;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
 button {
     border: 2px solid var(--fc-dark);
     color: var(--fc-dark);
@@ -54,6 +49,12 @@ button {
     cursor: pointer;
     transition-duration: 250ms;
     transition-timing-function: ease-in;
+    transition-property: background-color, color;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 @keyframes fade-in {
@@ -66,18 +67,98 @@ button {
     }
 }
 
-@keyframes slide-from-right {
+@keyframes fade-out {
     from {
-        transform: translateX(100%);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
     }
 
     to {
         transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* GET IN TOUCH MODAL  */
+
+/* .contact-modal {
+    width: 40%;
+    height: 300px;
+    position: fixed;
+    right: 30%;
+    top: 30%;
+    z-index: 9999;
+    border-radius: 1rem;
+    background-color: var(--logo-color);
+    box-shadow: 0 0 0 300vw rgba(0, 0, 0, 0.5);
+    animation: 250ms fade-in;
+    padding-block: 2em;
+    color: var(--fc-light);
+}
+
+@media screen and (max-width: 900px) {
+    .contact-modal {
+        width: 60%;
+        right: 20%;
     }
 }
 
 
-/* MENU  */
+.x-out-modal {
+    color: var(--fc-light);
+    font-size: var(--fs-m);
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+} */
+
 
 .x-out {
     width: 30%;
@@ -137,10 +218,11 @@ button {
     color: var(--hover-clr);
 }
 .hamburger-icon:hover, .hamburger-icon:active {
-    color: rgba(38, 37, 82, 0.608)
+    color:rgba(38, 37, 82, 0.5);
 }
+
 .menu ul li:hover, .menu ul li:active {
-    font-size: 2em;;
+    font-size: 2em;
 }
 
 @media only screen and (min-width: 900px) {
@@ -168,7 +250,7 @@ button {
 
 }
 
-@media screen and (max-height: 281px) and (orientation: landscape) {
+@media screen and (max-height: 281px) {
     .menu {
         font-size: var(--fs-s);
     }
@@ -192,7 +274,7 @@ button {
     padding-right: 2em;
     padding-top: 1em;
     z-index: 1;
-    transition-property: color;
+    animation: 1000ms fade-in ease-out
 }
 
 
@@ -202,19 +284,22 @@ button {
     list-style: none;
     gap: 1em;
     font-size: var(--fs-m);
+    color: var(--fc-light);
     width: 7.5em;
 }
 
-.left-list a {
-    color: var(--fc-dark);
-}
-
 .left-list a:hover, .left-list a:active {
-    color: rgba(38, 37, 82, 0.608)
+    color:rgba(38, 37, 82, 0.5);
 }
 
 .left-list img {
     width: 3.75em;
+}
+
+.left-list a {
+    color: var(--fc-dark);
+    transition-duration: 250ms;
+    transition-property: color;
 }
 
 .hamburger-icon {
@@ -222,11 +307,57 @@ button {
     color: var(--fc-dark);
     cursor: pointer;
     transition-duration: 250ms;
+    transition-property: color;
 }
 
 @media only screen and (min-width: 900px) {
     .hamburger-icon {
         margin-right: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    :root {
+        --fs-slogan: clamp(40px, 5vw, 5rem);
+        --fs-l: clamp(26px, 3.5vw, 4rem);
+        --fs-m: clamp(22px, 2.25vw, 3rem);
+        --fs-s: clamp(16px, 1.5vw, 1.5rem);
+        --fs-para: clamp(20px, 1.25vw, 2rem);
+    } 
+
+    .hamburger-icon {
+        font-size: clamp(1.75rem, 3.5vw, 5rem);
+        margin-bottom: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    :root {
+        --fs-slogan: clamp(40px, 5vw, 8rem);
+        --fs-l: clamp(26px, 3.5vw, 7rem);
+        --fs-m: clamp(22px, 2.25vw, 5rem);
+        --fs-s: clamp(16px, 1.5vw, 3rem);
+        --fs-para: clamp(20px, 1.25vw, 3rem);
+    } 
+
+    .hamburger-icon {
+        font-size: clamp(1.75rem, 3.5vw, 5rem);
+        margin-bottom: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    :root {
+        --fs-slogan: clamp(40px, 5vw, 10rem);
+        --fs-l: clamp(26px, 3.5vw, 9rem);
+        --fs-m: clamp(22px, 2.25vw, 7rem);
+        --fs-s: clamp(16px, 1.5vw, 5rem);
+        --fs-para: clamp(20px, 1.25vw, 5rem);
+    } 
+
+    .hamburger-icon {
+        font-size: clamp(1.75rem, 3.5vw, 5rem);
+        margin-bottom: 0.5em;
     }
 }
 
@@ -302,6 +433,11 @@ button {
     line-height: 175%;
     padding-top: 7.5em;
 }
+
+.content * {
+    animation: 1000ms fade-in ease-out;
+}
+
 
 @media only screen and (min-width: 1000px) {
     .content {
