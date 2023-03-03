@@ -54,12 +54,12 @@ icons.forEach(x => x.addEventListener("click", function(e) {
     } else {
         theModal += e.target.parentElement.nextElementSibling.textContent;
     }
-    document.querySelector(`.${theModal.split(" ").join("-")}`).classList.remove("display-none");
     disableScrolling();
+    document.querySelector(`.${theModal.split(" ").join("-")}`).classList.remove("display-none");
 }));
 
 xOutModal.forEach(x => x.addEventListener("click", function() {
+    enableScrolling();
     modals.forEach(x => x.classList.add("display-none"));
     content.style.pointerEvents = "auto";
-    enableScrolling();
 }));
