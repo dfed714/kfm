@@ -5,8 +5,8 @@ const hamburger = document.querySelector(".hamburger-icon");
 const homeBtn = document.querySelector(".home-btn");
 const content = document.querySelector(".content");
 const footer = document.querySelector(".footer");
-const xOutModal = document.querySelector(".x-out-modal");
-const modal = document.querySelector(".modal");
+const xOutModal = document.querySelectorAll(".x-out-modal");
+const modals = document.querySelectorAll(".modal");
 const icons = document.querySelectorAll(".icon")
 const topList = document.querySelector(".top-list");
 
@@ -46,14 +46,20 @@ xOut.addEventListener("click", function() {
 
 // GET IN TOUCH MODAL 
 
-icons.forEach(x => x.addEventListener("click", function() {
-    modal.classList.remove("display-none");
-    content.style.pointerEvents = "none";
+icons.forEach(x => x.addEventListener("click", function(e) {
+    let theModal = "";
+    if (e.target.nodeName == "DIV") {
+        theModal += e.target.nextElementSibling.textContent;
+        
+    } else {
+        theModal += e.target.parentElement.nextElementSibling.textContent;
+    }
+    document.querySelector(`.${theModal.split(" ").join("-")}`).classList.remove("display-none");
     disableScrolling();
 }));
 
-xOutModal.addEventListener("click", function() {
-    modal.classList.add("display-none");
+xOutModal.forEach(x => x.addEventListener("click", function() {
+    modals.forEach(x => x.classList.add("display-none"));
     content.style.pointerEvents = "auto";
     enableScrolling();
-})
+}));

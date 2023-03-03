@@ -433,6 +433,16 @@ a {
 }
 
 @media only screen and (max-width: 789px) {
+    .section1-text {
+        width: 60%;
+    }
+
+    .section1 img {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 625px) {
     .section1 {
         flex-direction: column-reverse;
         height: calc(100vh - 7rem);
@@ -486,11 +496,11 @@ a {
 .intro {
     background: var(--color-purple);
     padding-block: 7.5vw;
+    padding-inline: 5vw;
 }
 
 .intro > h2 {
     font-size: var(--fs-m);
-    width: 75%;
     margin-inline: auto;
     color: var(--fc-light);
     font-weight: var(--fw-thin);
@@ -529,7 +539,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 0.5em;
 }
 
 .container1 div div {
@@ -566,8 +576,8 @@ a {
         gap: 1em;
     }
 
-    .container1 div h3:not(.crisis) {
-        width: 69%;
+    .container1 div h3 {
+        width: 65%;
         text-align: center;
     }
 }
