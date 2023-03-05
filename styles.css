@@ -681,6 +681,7 @@ p {
     color: var(--fc-light);
     gap: 2em;
     background: var(--color-purple);
+    font-family: var(--gen-ff);
 }
 
 .banner h1 {
