@@ -19,7 +19,7 @@ const topList = document.querySelector(".top-list");
 // DISABLE SCROLLING 
 
 function disableScrolling() {
-    document.documentElement.style.overflowY = "hidden";
+    document.documentElement.style.overflowY = "clip";
 }
 
 // ENABLE SCROLLING 
@@ -96,7 +96,3 @@ xOut.addEventListener("click", function() {
 //     content.style.pointerEvents = "auto";
 //     enableScrolling();
 // })
-
-(function heightWidth() {
-    console.log(screen.width, screen.height, window.innerHeight, window.innerWidth);
-})();
