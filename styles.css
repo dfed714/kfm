@@ -672,38 +672,6 @@ p {
     }
 }
 
-/* BANNER  */
-
-.banner {
-    display: grid;
-    place-items: center;
-    padding-block: 12.5vw;
-    color: var(--fc-light);
-    gap: 2em;
-    background: var(--color-purple);
-    font-family: var(--gen-ff);
-}
-
-.banner h1 {
-    font-size: var(--fs-l);
-    text-align: center;
-}
-
-.banner h2 {
-    font-size: var(--fs-m);
-    font-weight: var(--fw-thin);
-    text-align: center;
-}
-
-.banner button {
-    border: 2px solid var(--fc-light);
-    color: var(--fc-light);
-}
-
-.banner button:hover, .banner button:active {
-    background: var(--fc-light);
-    color: var(--color-purple);
-}
 
 /* FOOTER  */
 
@@ -764,7 +732,41 @@ p {
     display: none;
 }
 
+/* BANNER  */
+
+.banner {
+    display: grid;
+    place-items: center;
+    padding-block: 12.5vw;
+    color: var(--fc-light);
+    gap: 2em;
+    background: var(--color-purple);
+    font-family: var(--gen-ff);
+}
+
+.banner h1 {
+    font-size: var(--fs-l);
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: var(--fs-m);
+    font-weight: var(--fw-thin);
+    text-align: center;
+}
+
+.banner button {
+    border: 2px solid var(--fc-light);
+    color: var(--fc-light);
+}
+
+.banner button:hover, .banner button:active {
+    background: var(--fc-light);
+    color: var(--color-purple);
+}
+
 .form {
+    margin-top: 2vw;
     width: 75%;
     display: flex;
     flex-direction: column;
