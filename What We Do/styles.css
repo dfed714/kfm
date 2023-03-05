@@ -397,7 +397,7 @@ a {
 /* CONTENT  */
 
 .content {
-    padding-top: 7em;
+    padding-top: 7rem;
     font-family: var(--gen-ff);
     background: var(--color-purple);
 }
@@ -460,7 +460,7 @@ a {
 @media only screen and (max-width: 625px) {
     .section1 {
         flex-direction: column-reverse;
-        height: calc(100vh);
+        height: calc(100vh - 7rem);
     }
 
     .section1-text {
@@ -509,19 +509,7 @@ a {
     }
     .section1-text{
         height: 100%;
-    }
-
-    .section1 {
-        height: calc(100vh - 7em);
-    }
-
-    
-}
-
-@media only screen and (max-height: 325px) and (max-width: 653px) {
-    .section1 {
-        height: 100vh;
-    }
+    }    
 }
 
 .intro {
@@ -657,7 +645,7 @@ a {
     font-size: var(--fs-m);
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 695px) {
     .container1 {
         gap: 1em;
         margin-bottom: 1em;
@@ -670,23 +658,22 @@ a {
     }
 }
 
-@media only screen and (max-width: 525px) {
+/* @media only screen and (max-width: 525px) {
 
     .container1 div h3:not(.crisis) {
         width: 65%;
         text-align: center;
         padding-inline: 0;
     }
-}
+} */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .container1:first-of-type {
         gap: 3em;
     }
 
-    .container1 div h3:not(.crisis) {
-        width: 60%;
-        text-align: center;
+    .container1 div h3 {
+        padding-inline: 2em;
     }
 
     .container1 div div {
@@ -694,6 +681,11 @@ a {
     }
 }
 
+@media only screen and (max-width: 355px) {
+    .container1 div h3 {
+        padding-inline: 0;
+    }
+}
 .banner {
     display: grid;
     place-items: center;
