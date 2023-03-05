@@ -782,6 +782,7 @@ p {
 .form input, .form textarea {
     background: transparent;
     border: none;
+    border-radius: 0%;
     border-bottom: 1px solid var(--fc-light);
     font-size: var(--fs-s);
     color: var(--fc-light);
@@ -792,7 +793,6 @@ p {
 
 .form input:focus, .form textarea:focus {
     outline: none;
-    border-radius: 0%;
 }
 
 input:-webkit-autofill,
