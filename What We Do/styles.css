@@ -307,7 +307,7 @@ a {
     padding-right: 2em;
     padding-top: 1em;
     z-index: 1;
-    /* animation: 1000ms slide-down ease-out */
+    animation: 1000ms slide-down ease-out
 }
 
 
@@ -414,7 +414,6 @@ a {
     height: 7.5em;
     display: flex;
     justify-content: space-between;
-    background: var(--logo-color);
 }
 
 .section1-text {
@@ -425,6 +424,8 @@ a {
     gap: 0.25em;
     color: var(--fc-light);
     width: 50%;
+    background: var(--logo-color);
+    animation: 1000ms slide-right ease-out
 }
 
 .section1 h1 {
@@ -443,6 +444,7 @@ a {
     width: 50%;
     object-position: top;
     max-height: 100%;
+    animation: 1000ms slide-left ease-out
 }
 
 @media only screen and (max-width: 789px) {
@@ -529,14 +531,17 @@ a {
 
 .intro div {
     width: 50%;
-    padding: 5vw;
+    padding-block: 7.5vw;
+    padding-inline: 5vw;
 }
 
 .intro div:first-child {
+    animation: 2000ms slide-right ease-out;
     background: var(--color-light-blue);
 }
 
 .intro div:nth-child(2) {
+    animation: 2000ms slide-left ease-out;
     background: var(--color-light-pink);
 }
 
@@ -552,6 +557,11 @@ a {
     .intro h1 {
         font-size: var(--fs-l);
     }
+}
+
+.section2 {
+    background-color: var(--logo-color);
+    padding-block: 5vw;
 }
 
 .container1 {
@@ -602,7 +612,7 @@ a {
     font-size: var(--fs-l);
     cursor: pointer;
     transition-property: color, background-color;
-    transition-duration: 250ms;
+    transition-duration: 500ms;
 }
 
 .container1 div div:hover, .container1 div div:active {
@@ -653,11 +663,38 @@ a {
     }
 }
 
+.banner {
+    display: grid;
+    place-items: center;
+    padding-block: 12.5vw;
+    color: var(--fc-light);
+    gap: 2em;
+}
+
+.banner h1 {
+    font-size: var(--fs-l);
+}
+
+.banner h2 {
+    font-size: var(--fs-m);
+    font-weight: var(--fw-thin);
+}
+
+.banner button {
+    border: 2px solid var(--fc-light);
+    color: var(--fc-light);
+}
+
+.banner button:hover, .banner button:active {
+    background: var(--fc-light);
+    color: var(--color-purple);
+}
+
 /* FOOTER  */
 
 .footer {
     width: 100%;
-    background: var(--color-purple);
+    background: var(--logo-color);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
