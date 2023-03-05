@@ -792,6 +792,7 @@ p {
 
 .form input:focus, .form textarea:focus {
     outline: none;
+    border-radius: 0%;
 }
 
 input:-webkit-autofill,
