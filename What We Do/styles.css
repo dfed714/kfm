@@ -658,15 +658,6 @@ a {
     }
 }
 
-/* @media only screen and (max-width: 525px) {
-
-    .container1 div h3:not(.crisis) {
-        width: 65%;
-        text-align: center;
-        padding-inline: 0;
-    }
-} */
-
 @media only screen and (max-width: 500px) {
     .container1:first-of-type {
         gap: 3em;
