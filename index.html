@@ -16,7 +16,6 @@
         <img class="loading-img" src="/photos/kfm-logo.png">
     </div>
 
-    
     <!-- MENU  -->
     <div class="menu display-none">
         <div class="x-out"><i class="fa-regular fa-circle-xmark"></i></div>
@@ -112,7 +111,33 @@
     <section class="banner">
         <h1>Start Your Journey Now</h1>
         <h2>We would love to hear from you</h2>
-        <a href="mailto:kevin@kevinfeddymedia.co.uk" target="_blank"><button>Get in touch</button></a>
+        
+         <!-- CONTACT FORM  -->
+
+    <form class="form" name="contact" method="POST" data-netlify="true" onSubmit="submit">
+        <p class="contact-s1">
+            <label>First Name <input type="text" name="first-name" /></label>
+            <label>Last Name <input type="text" name="last-name" /></label>
+        </p>
+
+        <p class="contact-s2">
+            <label>Company <input type="text" name="company" /></label>
+            <label>Phone Number <input type="tel" name="tel" /></label>
+        </p>
+
+        <p>
+            <label>Email <input id="email-box" type="email" name="email" /></label>
+        </p>
+
+        <p>
+            <label>Message <br><textarea type="text" id="msg-box" name="message"></textarea>
+        </p>
+
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    
     </section>
     
 </div>
