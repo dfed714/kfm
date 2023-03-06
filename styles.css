@@ -742,6 +742,7 @@ p {
     gap: 2em;
     background: var(--color-purple);
     font-family: var(--gen-ff);
+    scroll-margin-top: -6.25vw;
 }
 
 .banner h1 {
