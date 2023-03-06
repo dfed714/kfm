@@ -410,6 +410,7 @@ a {
 
 .section1-text {
     color: var(--fc-light);
+    font-family: var(--gen-ff);
 }
 
 .section1-text h1 {
@@ -430,7 +431,8 @@ a {
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    padding-block: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 10vw;
     width: 50%;
     margin-inline: auto;
     animation: 1500ms fade-in ease-in-out;
