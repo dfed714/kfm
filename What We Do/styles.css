@@ -762,3 +762,122 @@ a {
 .display-none {
     display: none;
 }
+
+/* BANNER  */
+
+.banner {
+    display: grid;
+    place-items: center;
+    padding-block: 12.5vw;
+    color: var(--fc-light);
+    gap: 2em;
+    background: var(--color-purple);
+    font-family: var(--gen-ff);
+}
+
+.banner h1 {
+    font-size: var(--fs-l);
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: var(--fs-m);
+    font-weight: var(--fw-thin);
+    text-align: center;
+}
+
+.banner button {
+    border: 2px solid var(--fc-light);
+    color: var(--fc-light);
+}
+
+.banner button:hover, .banner button:active {
+    background: var(--fc-light);
+    color: var(--color-purple);
+}
+
+.form {
+    margin-top: 2vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 850px) {
+    .form {
+        width: 75%;
+    }
+}
+
+.form label {
+    color: var(--fc-light);
+    font-size: var(--fs-s);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form input, .form textarea {
+    background: transparent;
+    border: none;
+    border-radius: 0%;
+    border-bottom: 1px solid var(--fc-light);
+    font-size: var(--fs-s);
+    color: var(--fc-light);
+    font-weight: var(--fw-thin);
+    padding-block: 0.5em;
+    font-family: var(--gen-ff);
+}
+
+.form input:focus, .form textarea:focus {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 1000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--fc-light) !important;
+}
+
+.contact-s1, .contact-s2 {
+    display: flex;
+    gap: 5vw;
+}
+
+#email-box {
+    width: 200%;
+}
+
+#msg-box {
+    width: 200%;
+    resize: none;
+}
+
+.form button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-inline: 2.5em; 
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+    .contact-s1, .contact-s2 {
+        flex-direction: column;
+    }
+
+    .form label {
+        width: 100%;
+    }
+
+    #email-box {
+        width: 100%;
+    }
+    
+    #msg-box {
+        width: 100%;
+    }
+}
