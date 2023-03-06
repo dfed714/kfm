@@ -6,7 +6,10 @@ const homeBtn = document.querySelector(".home-btn");
 const content = document.querySelector(".content");
 const footer = document.querySelector(".footer");
 const topList = document.querySelector(".top-list");
-const testimonials = document.querySelectorAll(".testimonial");
+const testimonial1 = document.querySelector(".testimonial1");
+const testimonial2 = document.querySelector(".testimonial2");
+const testimonial3 = document.querySelector(".testimonial3");
+const testimonial4 = document.querySelector(".testimonial4");
 const rightBtn = document.querySelector(".right-btn");
 const leftBtn = document.querySelector(".left-btn");
 
@@ -46,6 +49,8 @@ xOut.addEventListener("click", function() {
 
 // slider 
 
+let slide = 1;
+
 leftBtn.addEventListener("click", function() {
-    testimonials.forEach(x => console.log(new WebKitCSSMatrix(window.getComputedStyle(x).transform).m41));
-})
+    slide++;
+        })
