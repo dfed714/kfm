@@ -37,6 +37,7 @@
 html {
     font-size: 16px;
     overflow-x: clip;
+    background-color: var(--color-purple);
 }
 
 button {
@@ -298,14 +299,13 @@ a {
 .top-list {
     font-size: 1rem;
     width: 100%;
-    position: absolute;
-    top: 0;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 5vw;
     padding-right: 2em;
-    padding-top: 1em;
+    padding-block: 1em;
     z-index: 1;
     animation: 1000ms slide-down ease-out
 }
@@ -397,15 +397,8 @@ a {
 /* CONTENT  */
 
 .content {
-    padding-top: 7rem;
     font-family: var(--gen-ff);
     background: var(--color-purple);
-}
-
-@media only screen and (min-width: 1000px) {
-    .content {
-        padding-top: 10vw;
-    }
 }
 
 .section1 {
@@ -460,7 +453,7 @@ a {
 @media only screen and (max-width: 625px) {
     .section1 {
         flex-direction: column-reverse;
-        height: calc(100vh - 7rem);
+        height: calc(100vh - 6rem);
     }
 
     .section1-text {
@@ -560,16 +553,6 @@ a {
 
     .intro h1 {
         font-size: var(--fs-l);
-    }
-
-    .intro div:nth-child(2) {
-        animation: none;
-    }
-}
-
-@media only screen and (max-width: 625px) {
-    .intro div:first-child {
-        animation: none;
     }
 }
 

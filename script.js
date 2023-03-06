@@ -15,6 +15,7 @@ const getInTouchModal = document.querySelector(".contact-modal");
 const section1Text = document.querySelector(".section1-text");
 const section1Img = document.querySelector(".section1-image");
 const topList = document.querySelector(".top-list");
+const banner = document.querySelector(".banner");
 
 // DISABLE SCROLLING 
 
@@ -85,14 +86,6 @@ xOut.addEventListener("click", function() {
 
 // GET IN TOUCH MODAL 
 
-// getInTouch.addEventListener("click", function() {
-//     getInTouchModal.classList.remove("display-none");
-//     content.style.pointerEvents = "none";
-//     disableScrolling();
-// })
-
-// xOutModal.addEventListener("click", function() {
-//     getInTouchModal.classList.add("display-none");
-//     content.style.pointerEvents = "auto";
-//     enableScrolling();
-// })
+getInTouch.addEventListener("click", function() {
+    window.scrollTo(0, banner.getBoundingClientRect().top + ((window.innerHeight/100) * 6.25));
+})
