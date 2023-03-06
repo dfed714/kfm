@@ -709,7 +709,6 @@ p {
     font-family: var(--gen-ff);
     scroll-margin-top: -6.25vw;
     height: fit-content;
-    border: 2px solid red;
 }
 
 .banner h1 {
