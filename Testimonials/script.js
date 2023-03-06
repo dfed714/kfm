@@ -6,6 +6,9 @@ const homeBtn = document.querySelector(".home-btn");
 const content = document.querySelector(".content");
 const footer = document.querySelector(".footer");
 const topList = document.querySelector(".top-list");
+const testimonials = document.querySelectorAll(".testimonial");
+const rightBtn = document.querySelector(".right-btn");
+const leftBtn = document.querySelector(".left-btn");
 
 // DISABLE SCROLLING 
 
@@ -40,3 +43,9 @@ xOut.addEventListener("click", function() {
         menu.classList.add("display-none");
     }
 });
+
+// slider 
+
+leftBtn.addEventListener("click", function() {
+    testimonials.forEach(x => console.log(new WebKitCSSMatrix(window.getComputedStyle(x).transform).m41));
+})
