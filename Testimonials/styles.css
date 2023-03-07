@@ -416,6 +416,11 @@ a {
     padding-block: 10vw;
 }
 
+.text-section h2:first-of-type {
+    font-size: var(--fs-l);
+    font-weight: var(--fw-medium);
+}
+
 .text-section h2 {
     font-size: var(--fs-m);
     font-family: var(--gen-ff);
