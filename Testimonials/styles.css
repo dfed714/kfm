@@ -40,7 +40,7 @@
 html {
     font-size: 16px;
     overflow-x: clip;
-    background-color: var(--logo-color);
+    background-color: var(--color-purple);
 }
 
 button {
@@ -402,6 +402,7 @@ a {
     background: var(--logo-color);
     padding-block: 10vw;
     padding-inline: 5vw;
+    animation: 1500ms slide-right ease-out;
 }
 
 .section1 h1 {
@@ -414,6 +415,7 @@ a {
 .text-section {
     background-color: var(--color-light-blue);
     padding-block: 10vw;
+    animation: 1500ms slide-left ease-out;
 }
 
 .text-section h2:first-of-type {
@@ -441,6 +443,7 @@ a {
     height: clamp(250px, 15em, 75vh);
     background: transparent;
     margin-top: 2em;
+    animation: 1500ms slide-up ease-out;
 }
 
 .testimonials {
@@ -589,7 +592,7 @@ a {
 .dots {
     font-size: var(--fs-s);
     height: 0.25em;
-    background-color: var(--logo-color);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
