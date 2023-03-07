@@ -170,7 +170,7 @@ a {
 .modal p {
     text-align: center;
     width: 75%;
-    font-size: var(--fs-m);
+    font-size: var(--fs-para);
 }
 
 @media only screen and (max-width: 500px), screen and (max-height: 500px) {

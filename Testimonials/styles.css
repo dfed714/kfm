@@ -40,7 +40,7 @@
 html {
     font-size: 16px;
     overflow-x: clip;
-    background-color: var(--color-light-blue);
+    background-color: var(--logo-color);
 }
 
 button {
@@ -411,54 +411,65 @@ a {
     text-align: center;
 }
 
-.section1 h2 {
-    font-size: var(--fs-para);
+.text-section {
+    background-color: var(--color-light-blue);
+    padding-block: 10vw;
+}
+
+.text-section h2 {
+    font-size: var(--fs-m);
     font-family: var(--gen-ff);
-    color: var(--fc-light);
+    color: var(--fc-dark);
     font-weight: var(--fw-thin);
     text-align: center;
+    padding-block: 0.5em;
 }
 
 /* SLIDER  */
 
 .slider {
     display: flex;
+    /* align-items: center; */
     justify-content: space-between;
     font-size: var(--fs-slider);
     width: 100%;
-    height: clamp(250px, 20em, 75vh);
-    background: var(--color-purple);
+    height: clamp(250px, 15em, 75vh);
+    background: transparent;
+    margin-top: 2em;
 }
 
 .testimonials {
     font-size: var(--fs-slider);
+    position: relative;
     width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .testimonial {
     font-size: var(--fs-slider);
     height: clamp(250px, 20em, 75vh);
-    width: 75%;
+    width: 100%;
     position: absolute;
+    padding-left: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background: var(--color-purple);
+    justify-content: center;
+    gap: 1em;
     color: var(--fc-light);
     font-family: var(--gen-ff);
 }
 
 .testimonial h2 {
     font-weight: var(--fw-medium);
-    font-size: var(--fs-l);
+    font-size: var(--fs-m);
 }
 
 .testimonial p {
     font-weight: var(--fw-thin);
-    font-size: var(--fs-l);
+    font-size: var(--fs-m);
 }
 
 .testimonial-person {
@@ -470,7 +481,7 @@ a {
 
 .testimonial-person img {
     object-fit: cover;
-    height: 100%;
+    height: 75%;
     border-radius: 100%;
 }
 
@@ -483,18 +494,17 @@ a {
 
 .names h3:nth-of-type(2){
     font-weight: var(--fw-thin);
-    font-size: var(--fs-m);
+    font-size: var(--fs-s);
 }
 
 .names h3:nth-of-type(1){
     font-weight: var(--fw-medium);
-    font-size: var(--fs-m);
+    font-size: var(--fs-s);
 }
 
 .slider button {
     border: none;
     font-size: var(--fs-m);
-    background: transparent;
     color: var(--fc-light);
     display: flex;
     justify-content: center;
@@ -502,9 +512,40 @@ a {
     z-index: 9999;
 }
 
+.slider-button {
+    border: 2px solid var(--fc-light);
+    border-radius: 100%;
+    padding-block: 0.5em;
+    padding-inline: 0.6em;
+}
+
+.slider-button:hover {
+    color: var(--logo-color);
+    background-color: var(--fc-light);
+    transition-duration: 250ms;
+    transition-property: background-color, color;
+}
+
+@media only screen and (min-width: 750px) {
+    .slider button:nth-of-type(1) {
+        padding-left: 2em;
+    }
+
+    .slider button:nth-of-type(2) {
+        padding-right: 2em;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .slider button {
         width: 12.5%;
+        font-size: var(--fs-s);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .testimonial {
+        gap: 2em;
     }
 }
 
@@ -518,54 +559,52 @@ a {
         font-weight: var(--fw-thin);
         font-size: var(--fs-s);
     }
-    
-    .names h3:nth-of-type(2){
-        font-weight: var(--fw-thin);
-        font-size: var(--fs-s);
-    }
-    
-    .names h3:nth-of-type(1){
-        font-weight: var(--fw-medium);
-        font-size: var(--fs-s);
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .testimonial h2 {
-        font-weight: var(--fw-medium);
-        font-size: var(--fs-m);
-    }
-    
-    .testimonial p {
-        font-weight: var(--fw-thin);
-        font-size: var(--fs-m);
-    }
-    
-    .names h3:nth-of-type(2){
-        font-weight: var(--fw-thin);
-        font-size: var(--fs-m);
-    }
-    
-    .names h3:nth-of-type(1){
-        font-weight: var(--fw-medium);
-        font-size: var(--fs-m);
-    }
 }
 
 .testimonial4 {
-    transform: translateX(300%);
     animation: 1000ms slide-from-right ease-in-out;
+    transition: transform 1s;
 }
 
 .testimonial3 {
-    transform: translateX(200%);
     animation: 1000ms slide-from-right ease-in-out;
+    transition: transform 1s;
 }
 
 .testimonial2 {
-    transform: translateX(100%);
     animation: 1000ms slide-from-right ease-in-out;
+    transition: transform 1s;
 }
+
+.testimonial1 {
+    animation: 1000ms slide-from-right ease-in-out;
+    transition: transform 1s;
+}
+
+.dots {
+    font-size: var(--fs-s);
+    height: 0.25em;
+    background-color: var(--logo-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 5vw;
+}
+
+.dots__dot {
+    font-size: clamp(1px, 0.5vw, 7px);
+    background-color: var(--fc-light);
+    opacity: 1;
+    border-radius: 50%;
+    border-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s;  
+  }
+
+  .dots__dot--active {
+    opacity: 0.25;
+  }
 
 /* UTILITY CLASSES  */
 
