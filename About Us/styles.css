@@ -283,7 +283,8 @@ a {
     cursor: pointer;
     transition-duration: 250ms;
     transition-property: color;
-    animation: 1000ms slide-down ease-out
+    padding: 0;
+    border: none;
 }
 
 @media only screen and (min-width: 900px) {
@@ -442,7 +443,7 @@ a {
 .section2 img {
     border-radius: 50%;
     width: 25%;
-    aspect-ratio: 1.1/1;
+    aspect-ratio: 1.09/1;
     border: 1px solid rgba(38, 37, 82, 0.197);
 }
 

@@ -270,6 +270,7 @@ a {
 
 .left-list img {
     width: 3.75em;
+    aspect-ratio: 1.11/1;
 }
 
 .left-list a {
@@ -284,7 +285,8 @@ a {
     cursor: pointer;
     transition-duration: 250ms;
     transition-property: color;
-    animation: 1000ms slide-down ease-out
+    padding: 0;
+    border: none;
 }
 
 @media only screen and (min-width: 900px) {
@@ -490,6 +492,7 @@ a {
 .testimonial-person img {
     object-fit: cover;
     height: 75%;
+    aspect-ratio: 1/1;
     border-radius: 100%;
 }
 

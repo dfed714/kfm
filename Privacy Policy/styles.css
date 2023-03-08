@@ -212,6 +212,7 @@ a {
 
 .left-list img {
     width: 3.75em;
+    aspect-ratio: 1.11/1;
 }
 
 .left-list a {
@@ -226,6 +227,8 @@ a {
     cursor: pointer;
     transition-duration: 250ms;
     transition-property: color;
+    padding: 0;
+    border: none;
 }
 
 @media only screen and (min-width: 900px) {
