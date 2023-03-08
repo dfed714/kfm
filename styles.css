@@ -225,7 +225,7 @@ a {
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--fc-light);
     transition-duration: 250ms;
-    transition-property: font-size;
+    transition-property: opacity;
 }
 
 .x-out:hover, .hamburger-icon:hover, .x-out:active, .hamburger-icon:active  {
@@ -233,7 +233,7 @@ a {
 }
 
 .menu ul li:hover, .menu ul li:active {
-    font-size: 2em;
+    opacity: 0.5;
 }
 
 @media only screen and (min-width: 900px) {
