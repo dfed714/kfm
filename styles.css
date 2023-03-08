@@ -169,7 +169,8 @@ a {
 }
 
 .loading-img {
-    max-width: max(10%, 100px);
+    width: max(10%, 100px);
+    aspect-ratio: 1.11/1;
     animation: 5s fade-in;
 }
 
