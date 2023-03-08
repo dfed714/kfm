@@ -305,7 +305,7 @@ a {
 
 .left-list img {
     width: 3.75em;
-    height: 3.5em;
+    aspect-ratio: 1.11/1;
 }
 
 .left-list a {
@@ -415,6 +415,7 @@ a {
 @media only screen and (max-height: 800px) and (min-width: 1075px) {
     .section1-image {
         height: 80%;
+        width: 100%;
     }
 }
 
@@ -623,6 +624,7 @@ p {
     .content1-img-mobile, .content2-img-mobile, .content3-img-mobile {
         display: block;
         width: 100%;
+        height: 100%;
     }
 }
 
@@ -630,6 +632,7 @@ p {
     .content1-img-mobile, .content2-img-mobile, .content3-img-mobile {
         display: block;
         width: 100%;
+        height: 100%;
     }
 }
 
