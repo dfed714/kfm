@@ -415,7 +415,6 @@ a {
 @media only screen and (max-height: 800px) and (min-width: 1075px) {
     .section1-image {
         height: 80%;
-        width: 100%;
     }
 }
 
