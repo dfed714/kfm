@@ -285,6 +285,7 @@ a {
     transition-property: color;
     padding: 0;
     border: none;
+    animation: 1000ms slide-down ease-out
 }
 
 @media only screen and (min-width: 900px) {

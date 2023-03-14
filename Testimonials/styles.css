@@ -167,7 +167,7 @@ a {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 8;
     background-color: var(--logo-color);
     padding-left: 2em;
     font-size: var(--fs-m);
@@ -287,6 +287,7 @@ a {
     transition-property: color;
     padding: 0;
     border: none;
+    animation: 1000ms slide-down ease-out
 }
 
 @media only screen and (min-width: 900px) {
@@ -438,7 +439,6 @@ a {
 
 .slider {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     font-size: var(--fs-slider);
     width: 100%;
@@ -521,7 +521,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 7;
 }
 
 .slider-button {
