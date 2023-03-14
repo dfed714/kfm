@@ -127,3 +127,7 @@ const createDots = function () {
   });
 };
 slider();
+
+(function start() {
+  console.log([...slides])
+})()

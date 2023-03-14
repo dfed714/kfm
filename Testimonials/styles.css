@@ -445,7 +445,7 @@ a {
     height: clamp(250px, 15em, 75vh);
     background: transparent;
     margin-top: 2em;
-    animation: 1500ms slide-up ease-out;
+    animation: 2500ms fade-in ease-in-out;
 }
 
 .testimonials {
@@ -470,6 +470,7 @@ a {
     gap: 1em;
     color: var(--fc-light);
     font-family: var(--gen-ff);
+    background-color: var(--color-purple);
 }
 
 .testimonial h2 {
@@ -575,21 +576,25 @@ a {
 .testimonial4 {
     animation: 1000ms slide-from-right ease-in-out;
     transition: transform 1s;
+    z-index: 2;
 }
 
 .testimonial3 {
     animation: 1000ms slide-from-right ease-in-out;
     transition: transform 1s;
+    z-index: 3;
 }
 
 .testimonial2 {
     animation: 1000ms slide-from-right ease-in-out;
     transition: transform 1s;
+    z-index: 4;
 }
 
 .testimonial1 {
     animation: 1000ms slide-from-right ease-in-out;
     transition: transform 1s;
+    z-index: 5;
 }
 
 .dots {
@@ -601,9 +606,11 @@ a {
     justify-content: center;
     gap: 1em;
     margin-bottom: 5vw;
+    animation: 1500ms slide-left ease-in-out;
 }
 
 .dots__dot {
+    z-index: 6;
     font-size: clamp(1px, 0.5vw, 7px);
     background-color: var(--fc-light);
     opacity: 1;
