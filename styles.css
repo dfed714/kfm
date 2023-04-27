@@ -45,7 +45,7 @@ html {
     overflow-x: clip;
 }
 
-button {
+button, .home-link {
     border: 2px solid var(--fc-dark);
     color: var(--fc-dark);
     background-color: var(--btn-bg);
@@ -63,17 +63,17 @@ button {
     color: #88498F;
 }
 
-.content1 button:hover, .content1 button:active {
+.content1 a:hover, .content1 a:active {
     background-color: var(--fc-light);
     color: var(--logo-color);
 }
 
-.content2 button:hover, .content2 button:active  {
+.content2 a:hover, .content2 a:active  {
     background-color: var(--fc-dark);
     color: var(--color-light-blue);
 }
 
-.content3 button:hover, .content3 button:active  {
+.content3 a:hover, .content3 a:active  {
     background-color: var(--fc-dark);
     color: var(--color-light-pink);
 }
@@ -369,7 +369,7 @@ a {
     margin-top: 2px;
 }
 
-.section1-btn, .content1 button {
+.section1-btn, .content1 a {
     color: var(--fc-light);
     border-color: var(--fc-light);
 }
