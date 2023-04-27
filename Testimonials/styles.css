@@ -494,9 +494,14 @@ a {
 
 .testimonial-person img {
     object-fit: cover;
+    object-position: top;
     height: 75%;
     aspect-ratio: 1/1;
     border-radius: 100%;
+}
+
+.testimonial2 .testimonial-person img, .testimonial3 .testimonial-person img, .testimonial4 .testimonial-person img {
+    object-position: 50% 30%;
 }
 
 .names {
