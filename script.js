@@ -37,7 +37,7 @@ let loadingInterval = setInterval(loading, 1000);
 function loading() {
     loadingCount++
         if (loadingCount >= 3) {
-            enableScrolling();
+            // enableScrolling();
             loadingPage.classList.add("display-none");
             clearInterval(loadingInterval);
         } 
@@ -50,10 +50,10 @@ function loadingScreen() {
         section1Img.style.animationDelay = "2000ms";
         topList.style.animationDelay = "2000ms";
         sessionStorage.setItem("loaded", true);
-        disableScrolling();
+        // disableScrolling();
     } else {
         loadingPage.classList.add("display-none");
-        enableScrolling();
+        // enableScrolling();
         section1Text.style.animationDelay = "0";
         section1Img.style.animationDelay = "0";
         topList.style.animationDelay = "0"
