@@ -504,8 +504,16 @@ a {
 
 .testimonial2 .testimonial-person img,
 .testimonial3 .testimonial-person img,
-.testimonial4 .testimonial-person img {
+.testimonial1 .testimonial-person img {
   object-position: 50% 30%;
+}
+
+.testimonial5 .testimonial-person img {
+  object-position: center 20%;
+}
+.testimonial4 .testimonial-person img,
+.testimonial6 .testimonial-person img {
+  object-position: center;
 }
 
 .names {
