@@ -408,11 +408,15 @@ a {
   justify-content: center;
   align-items: center;
   background-color: var(--logo-color);
-  padding-block: 10vw;
+  padding-block: 5vw;
   animation: 1000ms slide-right ease-out;
   color: var(--fc-light);
   font-size: var(--fs-slogan);
   font-family: var(--gen-ff);
+}
+
+.section1 h1 {
+  font-size: var(--fs-slogan);
 }
 
 /* SECTION 2  */
@@ -442,6 +446,7 @@ a {
   color: var(--fc-light);
   font-family: var(--gen-ff);
   font-weight: var(--fw-thin);
+  line-height: 150%;
 }
 
 /* BANNER  */
@@ -581,6 +586,10 @@ input:-webkit-autofill:active {
     justify-content: center;
     align-items: center;
     gap: 10vw;
+  }
+
+  #contact-section {
+    border-top: 1px solid var(--color-light-blue);
   }
 
   .text {

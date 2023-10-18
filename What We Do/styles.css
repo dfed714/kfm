@@ -148,7 +148,7 @@ a {
 
 .icon {
   border-radius: 50%;
-  width: 2em;
+  min-width: 2em;
   aspect-ratio: 1/1;
   border: 2px solid var(--fc-light);
   display: grid;
@@ -505,6 +505,10 @@ a {
   }
   .section1-text {
     height: 100%;
+  }
+
+  .section1-text h1 {
+    font-size: var(--fs-l);
   }
 }
 
