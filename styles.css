@@ -153,11 +153,31 @@ a {
   }
 }
 
+@keyframes lp-fade-out {
+  0% {
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  99% {
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0vh;
+    width: 0vw;
+  }
+}
+
 /* LOADING PAGE  */
 
 .loading-page {
-  width: 100vw;
-  height: 100vh;
+  width: 0vw;
+  height: 0vh;
   overflow: hidden;
   background-color: #88498f;
   flex-direction: column;
@@ -165,10 +185,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 9999;
-  animation: 500ms fade-out;
-  animation-delay: 2500ms;
+  position: fixed;
+  animation-name: lp-fade-out;
+  animation-duration: 2500ms;
+  z-index: 999;
 }
 
 .loading-img {
