@@ -405,7 +405,6 @@ a {
   gap: 1em;
   background: var(--logo-color);
   padding-block: 5vw;
-  padding-inline: 5vw;
   animation: 1500ms slide-right ease-out;
 }
 
@@ -424,17 +423,30 @@ a {
 }
 
 .text-section h2:first-of-type {
-  font-size: var(--fs-l);
+  font-size: var(--fs-m);
   font-weight: var(--fw-medium);
 }
 
 .text-section h2 {
-  font-size: var(--fs-m);
+  font-size: var(--fs-para);
   font-family: var(--gen-ff);
   color: var(--fc-dark);
   font-weight: var(--fw-thin);
   text-align: center;
   padding-block: 0.5em;
+  width: 75%;
+  margin-inline: auto;
+  line-height: 150%;
+}
+
+@media only screen and (max-width: 850px) {
+  .text-section h2 {
+    width: 100%;
+  }
+
+  .section1 {
+    padding-inline: 5vw;
+  }
 }
 
 /* SLIDER  */
