@@ -504,16 +504,9 @@ a {
   }
 }
 
-@media only screen and (max-width: 350px) {
-  .section1-img {
-    display: none;
-  }
-  .section1-text {
-    height: 100%;
-  }
-
+@media only screen and (max-width: 625px) {
   .section1-text h1 {
-    font-size: var(--fs-l);
+    font-size: clamp(32px, 7vw, 3.5rem);
   }
 }
 
