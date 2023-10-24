@@ -455,14 +455,14 @@ a {
   }
 }
 
-@media screen and (max-height: 331px) {
+@media screen and (max-height: 350px) {
   .section1-text {
-    margin-top: 2.5em;
+    margin-top: 5.5em;
     padding-bottom: 1em;
   }
 
   .section1 {
-    height: fit-content;
+    min-height: 300px;
   }
 }
 
