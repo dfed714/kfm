@@ -14,67 +14,69 @@ const slides = document.querySelectorAll(".testimonial");
 const rightBtn = document.querySelector(".right-btn");
 const leftBtn = document.querySelector(".left-btn");
 
-// DISABLE SCROLLING 
+// DISABLE SCROLLING
 
 function disableScrolling() {
-    document.documentElement.style.overflowY = "hidden";
+  document.documentElement.style.overflowY = "hidden";
 }
 
-// ENABLE SCROLLING 
+// ENABLE SCROLLING
 
 function enableScrolling() {
-    document.documentElement.style.overflowY = "auto";
+  document.documentElement.style.overflowY = "auto";
 }
 
-// MENU 
+// MENU
 
 hamburger.addEventListener("click", hamburgerFunc);
 
 function hamburgerFunc() {
-    if (window.innerWidth < 900) {
-        menu.classList.remove("display-none");
-        disableScrolling();
-    } else {
-        menu.classList.remove("display-none");
-    }
+  if (window.innerWidth < 900) {
+    menu.classList.remove("display-none");
+    disableScrolling();
+  } else {
+    menu.classList.remove("display-none");
+  }
 }
 
-xOut.addEventListener("click", function() {
-    if (window.innerWidth < 900) {
-        menu.classList.add("display-none");
-        enableScrolling();
-    } else {
-        menu.classList.add("display-none");
-    }
+xOut.addEventListener("click", function () {
+  if (window.innerWidth < 900) {
+    menu.classList.add("display-none");
+    enableScrolling();
+  } else {
+    menu.classList.add("display-none");
+  }
 });
 
-// slider 
+// slider
 function slider() {
-const dotContainer = document.querySelector('.dots');
-let curSlide = 0;
-const maxSlide = slides.length;
+  const dotContainer = document.querySelector(".dots");
+  let curSlide = 0;
+  const maxSlide = slides.length;
 
-// Functions
-const createDots = function () {
+  // Functions
+  const createDots = function () {
     slides.forEach(function (_, i) {
       dotContainer.insertAdjacentHTML(
-        'beforeend',
-        `<button class="dots__dot" data-slide="${i}"  aria-label="Button for testimonial ${i + 1} "></button>`
+        "beforeend",
+        `<button class="dots__dot" data-slide="${i}"  aria-label="Button for testimonial ${
+          i + 1
+        } "></button>`
       );
     });
   };
 
   const activateDot = function (slide) {
     document
-      .querySelectorAll('.dots__dot')
-      .forEach(dot => dot.classList.remove('dots__dot--active'));
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
 
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
-      .classList.add('dots__dot--active');
+      .classList.add("dots__dot--active");
   };
 
- const goToSlide = function (slide) {
+  const goToSlide = function (slide) {
     slides.forEach(
       (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
@@ -113,21 +115,21 @@ const createDots = function () {
   rightBtn.addEventListener("click", nextSlide);
   leftBtn.addEventListener("click", prevSlide);
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') prevSlide();
-    e.key === 'ArrowRight' && nextSlide();
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") prevSlide();
+    e.key === "ArrowRight" && nextSlide();
   });
 
-  dotContainer.addEventListener('click', function (e) {
-    if (e.target.classList.contains('dots__dot')) {
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
       const { slide } = e.target.dataset;
       goToSlide(slide);
       activateDot(slide);
     }
   });
-};
+}
 slider();
 
 (function start() {
-  console.log([...slides])
-})()
+  console.log([...slides]);
+})();
